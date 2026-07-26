@@ -1,0 +1,12 @@
+From: newsletter@company.com
+Subject: This Month in Engineering
+
+Hi everyone,
+
+Here's our regular monthly roundup of engineering updates. No action is
+needed on your part -- this is just an FYI digest. You can browse past
+issues on the internal wiki at https://wiki.company.com/newsletter whenever
+convenient.
+
+Have a great week,
+The Engineering Team

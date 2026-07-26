@@ -1,0 +1,7 @@
+2026-07-26 22:10:27,984 | INFO     | phishguard | Analyzed 'phishing_sample_1.eml' -> score=98 verdict=MALICIOUS findings=7
+2026-07-26 22:10:44,938 | INFO     | phishguard | Analyzed 'phishing_sample_1.eml' -> score=98 verdict=MALICIOUS findings=7
+2026-07-26 22:12:05,942 | INFO     | phishguard | Analyzed 'safe_sample_1.eml' -> score=10 verdict=SAFE findings=1
+2026-07-26 22:12:18,641 | INFO     | phishguard | Analyzed 'smishing_sample_1.txt' -> score=45 verdict=SUSPICIOUS findings=3
+2026-07-26 22:15:53,263 | INFO     | phishguard | Analyzed 'sms.txt' -> score=15 verdict=SAFE findings=1
+2026-07-26 22:26:54,849 | INFO     | phishguard | Analyzed 'example.eml' -> score=20 verdict=SAFE findings=1
+2026-07-26 22:27:14,018 | INFO     | phishguard | Analyzed 'example.eml' -> score=20 verdict=SAFE findings=1

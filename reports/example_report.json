@@ -1,0 +1,25 @@
+{
+  "source": "example.eml",
+  "generated_at_utc": "2026-07-26T16:57:14.020001+00:00",
+  "message": {
+    "subject": "=?UTF-8?Q?=F0=9F=9A=80_Introducing_Gemini_3=2E6_Flash_and_3=2E5_Flash=2DLite?=",
+    "from_display_name": "Google AI Studio",
+    "from_address": "googleaistudio-noreply@google.com",
+    "reply_to_address": "googleaistudio-noreply@google.com",
+    "attachment_count": 0,
+    "attachments": []
+  },
+  "risk": {
+    "score": 20,
+    "verdict": "SAFE",
+    "recommended_action": "Close"
+  },
+  "findings": [
+    {
+      "category": "typosquat_domain",
+      "severity_label": "High",
+      "description": "Domain combines brand name 'google' with extra words (combosquatting) in 'googleapis.com'.",
+      "evidence": "URL: https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Google+Sans:400,500,700|Google+Sans+Display:400,500,700|Open+Sans:400,500,700"
+    }
+  ]
+}

@@ -1,0 +1,1729 @@
+Delivered-To: harshksingh897@gmail.com
+Received: by 2002:a05:7208:2203:b0:108:498:67ed with SMTP id s3csp2553707rbb;
+        Wed, 22 Jul 2026 01:02:15 -0700 (PDT)
+X-Received: by 2002:a05:620a:440b:b0:930:a154:882e with SMTP id af79cd13be357-930b438c438mr2020764685a.84.1784707335481;
+        Wed, 22 Jul 2026 01:02:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1784707335; cv=none;
+        d=google.com; s=arc-20260327;
+        b=AxV2I6Y+fWu5Z0zNcmey/QKsxV0kciZyfMZKBF24rdly5/OouiMkxrWi/Bzvd5Seh4
+         SPzjy1M/odtNeodKQWoVqfixXiXu9KkZ6owYPmc2y/RrDvqf9EJKO/fZUm0BEerzaAmn
+         F2HVmS2NmBodv7gq6/Hro8rUO63zNd3R1A8OvP2MSGnj5sEGq0JAGvWZ3dL24TN1XTKR
+         nn1hToGP+fY77yX+s3yCOfrmK65J8JZvOyAEP9AFrHZ6q7g6RX+SVUNLC0cKJH5iCQTO
+         NAPjRnS300mlYZEqQbfzpIm9sX6PGF+cEjpaayXyxWWsSeCbsIBnFl9j6LhRQGOenYde
+         xUig==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:from:subject:message-id:gmsai:list-id:feedback-id:precedence
+         :list-unsubscribe:list-unsubscribe-post:reply-to:date:mime-version
+         :dkim-signature;
+        bh=LMMLI52Er0TpTo8e021mhCWHPhb+vBcdQmJlLq1VR6c=;
+        fh=g9d/1ozZ/3ZRhiUDBv08aU/uTmH5UW4+8hrkjClWM4w=;
+        b=RuC296Sf8VRXa/Q/Okdsd1AMOWeDSfoHwsBMSqIZUcAtdlzztyJXKaXzeIFVaYzx6W
+         iqJ5bN4ur7snzJQGou1YZpmROQSIlgI20cSzBdBUsteNULaE6E64OKm1kN5PfhTE6YY/
+         7+JzUpJnx/BeuaxMiUy8isv2pxA/SbvW6olSXtMo54UIxiuexcsNhp/pqMwmjSEkxr5W
+         VQjmYlXxxVw7IRZHyiUO254upd+uX5XH6nbbHp6f2M92+lYQKmrJbxc9kqlSKq3JMPkX
+         E78eMR0AggRKQ1i5IUWAqy5C+zbjiR+myqX8kysr6tK+6xPBihCsLBjaj39guakQaxYF
+         ranw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20251104 header.b=BWDFoZsk;
+       spf=pass (google.com: domain of 3b3lgahykanq6ee6b408ijk38e-deh4fbo6ee6b4.2ec@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3B3lgahYKANQ6EE6B408IJK38E-DEH4FBO6EE6B4.2EC@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3B3lgahYKANQ6EE6B408IJK38E-DEH4FBO6EE6B4.2EC@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id af79cd13be357-930f691f45dsor133750785a.7.2026.07.22.01.02.15
+        for <harshksingh897@gmail.com>
+        (Google Transport Security);
+        Wed, 22 Jul 2026 01:02:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3b3lgahykanq6ee6b408ijk38e-deh4fbo6ee6b4.2ec@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20251104 header.b=BWDFoZsk;
+       spf=pass (google.com: domain of 3b3lgahykanq6ee6b408ijk38e-deh4fbo6ee6b4.2ec@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3B3lgahYKANQ6EE6B408IJK38E-DEH4FBO6EE6B4.2EC@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20251104; t=1784707335; x=1785312135; dara=google.com;
+        h=content-type:to:from:subject:message-id:gmsai:list-id:feedback-id
+         :precedence:list-unsubscribe:list-unsubscribe-post:reply-to:date
+         :mime-version:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=LMMLI52Er0TpTo8e021mhCWHPhb+vBcdQmJlLq1VR6c=;
+        b=BWDFoZsk8LzhUZdUBZbJaIi52mDX7e8lm6bIzEtxL6GLGoWEf0qOiuxikrJb2ScXd+
+         tLyzAA3O+7z1uZAWQyyhi0rV6QysgTCtbnuUqSqp+G2sd3mUqJo//U3veJih6of04p9s
+         SDlKB0WaIo3VIhA3J3QOFYdm6YlIp+i8k3+IVhgAcxCXIXFOLwL2Q7f5V1H79U2DChjJ
+         +N8BKoStHzuy0+ph74mrU9cWQ3/tS37nGlh6Rxq79vZ/E1X7v3y9M7rQwSuGmQQXXdHQ
+         9O9C5CkFzGSCy4okLItFS1tR7KmCyMl4DuRc6YcBwUCtafmi/+WnGBc+KDWOjtgWEEFb
+         6Dtg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1784707335; x=1785312135;
+        h=content-type:to:from:subject:message-id:gmsai:list-id:feedback-id
+         :precedence:list-unsubscribe:list-unsubscribe-post:reply-to:date
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to:content-type;
+        bh=LMMLI52Er0TpTo8e021mhCWHPhb+vBcdQmJlLq1VR6c=;
+        b=h7USz2zbJMjOvkcx90A9S6YjryPA62Wi74Lfz1KVPb4+nm7cxBSieJnQOA+T8kLGNH
+         jCJ/F8BrpehvF9181SrJTAli03gEThluPZ1rujKTTyCf4ooszfBTCduBedC3yzyYGZ1y
+         l0sSuHXaQFItr9hHTG4xvPZHbG6tqKC8/BxGIddwwPAeL4XirzN5tPaFzILpIq2K8dNu
+         fSCaUPW0gR97nq+nHa91boPyRzADma1GSfRwDdP+AcjYDfjPtp7Q5YPRX1/eKbYpmidT
+         COz5b5lC9OvUBwDLTf50p7+h5MFc1xaFSt0hhpWaAof1c8QS9g/lIC6CXf0klr02+cUq
+         iiJg==
+X-Gm-Message-State: AOJu0YyFiWPGpGAV2uB/K5SrKcc039fF1qwSEafkyWjOkm8041spt4F9
+	jU2Wj1kxX+FqjOdfpReRLCvT1RxYRXSAEhL37NUjyM4SMKaEAUZ5lmywNms7
+MIME-Version: 1.0
+X-Received: by 2002:a05:622a:1196:b0:517:96f0:5658 with SMTP id
+ d75a77b69052e-5213a384370mr191428901cf.14.1784707335104; Wed, 22 Jul 2026
+ 01:02:15 -0700 (PDT)
+Date: Wed, 22 Jul 2026 01:02:15 -0700
+Reply-To: googleaistudio-noreply@google.com
+X-Google-Id: 4489410
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://myaccount.google.com/communication-preferences/auto/unsubscribe/gt/AKMee0e3PY8hZGmLgsFR_G0UPqJ1NSBJiYqtXY06i9536ijKihqtytU27NuoDiBoZyhzAnAWVod1IrYKLmqK9gFC0RjwXNTzQaWwEzAQ6sVsnkAeHj0eTBQE2ppnwcBpI4m7e9-Hm0kjxaHJtHn1fk60M2IRc7FxaEfRUFeHjrWZX9RQrU3cj1IzTNx0HWpWTToPwrgoR7tXpbI1mS5o-Ce6QZQrjKy-bGtuGzgTY5DGGUuUo5YhiXtn?utm_source=gm_header&utm_medium=email>
+Precedence: bulk
+Feedback-ID: P-517728972--1636283551:C20413632:M111257193-en:gamma
+List-Id: <f99f2495468846153ede376909eb48cd6de931e1.google.com>
+gmsai: false
+X-Google-Notification-Metadata: EgA
+X-Notifications: b0db80f5cf6e0000
+X-Notifications-Bounce-Info: AShsMT8JdTkkolome4yR1B0kAOyP0CwEl2bkk7B-BoJvRSnF-nE1tdIK7RR_xGsa7doNMZBzcOS-iJ60ZVI2Kz-Jqqx5zjCob8d2RcqnUYZSCHKGT-jKxeMVBQGpVjYMyGFO-VbhyKopcuPyTMpw_H1XyamjlIlG_eJIoxOXFMyWHjlumODIYJq-Lu4RFfgfOa6mlD55AX5nlZrmnfM0Q-IwZFEHmGE6UjQgTC3X1M-T_NNRL_M4OvaNeEwdoBuLKpEfq94aKKkdTjIswsRr5wU6Gw752xc3lZp6LWKRWb5dLDElLg7Um_SzcK3NdcwXxyZMQqAmj2JFFV1PpD3oTAQ_8g1SSKwzaVstPW7DaBi1TdT5ENBO5otUcX5vXbet-hbIR3X4VG6CBX1bOCmn82E2yLk8eaoED4xZhTePi2q8z7O94Y0dyAkoaTH23pIBhbq_AWeUmFooDK2NKl20QRB69D-I7beHWTBo18kQEp9UjYdG98uFcze8yEQjrmSENsd7-oFho2kM1eXyg9_iiJUzvMU2CtRR2fF4Vk2QwiwjJpHAH1SOf3V570EG7KfmNjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <5c24a18ad17757d40a725e7f4d15eec92c04cf10-20413632-111875859@google.com>
+Subject: =?UTF-8?Q?=F0=9F=9A=80_Introducing_Gemini_3=2E6_Flash_and_3=2E5_Flash=2DLite?=
+From: Google AI Studio <googleaistudio-noreply@google.com>
+To: harshksingh897@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000bca8b706572e8e00"
+
+--000000000000bca8b706572e8e00
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+RW1haWwgbm90IGRpc3BsYXlpbmcgY29ycmVjdGx5PyBWaWV3IGluICANCmJyb3dzZXI8aHR0cHM6
+Ly9ub3RpZmljYXRpb25zLmdvb2dsZS5jb20vZy92aWIvQUtNZWUwZUpaQ2RKbE9IbW4zTUNmdW1F
+a29ybW5CSVZDMnVybmQ4cWRYZnhvZWg0enNlZTI4VFduYUV2OE41OV9oV2RqQ1J1TmdHbGtaTXYt
+QVpMa0haMzBEZHNxSDZVZmpmcXB0UHk1cU5aUDVTTElvaFAtcWJ5TXJOeEs2SHdvUXJHalpRPg0K
+DQpHb29nbGUgQUkgIA0KU3R1ZGlvPGh0dHBzOi8vYy5nbGUvQUtNZWUwY1BLN1htWlFJeWRoQWJC
+VlBZNDhGZTRIRHJzdmprSWk4S0ZVWWY3LXo3RkdLSkFqam9ndi0xM21XVmRGSTk5QTVXTW95WFlJ
+c3VqWG1vVk1oQ0F0SlA0aHhRMjN5eWxqOUdJOEg5di1sSkU3bVh6U2s3bTRxNFQyOTl1UUhDZGtm
+ZTNGTmRCUzVsTnJmdi1vZ0FpV1pKU0VnPg0KDQpCdWlsZCBtb3JlIHdpdGggbmV3IHRva2VuLWVm
+ZmljaWVudCwgbG93ZXItY29zdCBtb2RlbHMNCg0KSW50cm9kdWNpbmcgR2VtaW5pIDMuNiBGbGFz
+aCBhbmQgMy41IEZsYXNoLUxpdGUgaW4gdGhlIEdlbWluaSBBUEkNCg0KUmVhZCB0aGUgIA0KZG9j
+czxodHRwczovL2MuZ2xlL0FLTWVlMGNXbXZ3REZuZFNNenFsOWZkNkRveGN3V1VCZVVMYTh2RHpY
+MVY2ZFVPZzQtX3J3MW0yMUVkdTJBSEUxZHFSbjNfcGxocHc4V2d6RWc2MnE4VVJVM1RwOUFMVTV0
+by1HU3JBWkpoakozQlpMQ2pGTV9mU0E4NjZnOHozSjl1dWxFME1KNWJyTWtuRDc5cUNCZ0Z2aEJJ
+RVg1UVlSZC1udmlmcFZ4UjNfenpablVKNj4NCg0KVHJ5IGluIEFJICANClN0dWRpbzxodHRwczov
+L2MuZ2xlL0FLTWVlMGRVNVZnZ2c5MXp3SUVsay1lUGotZWJ4WlFoRE8tT2hSTm80ZklmRFpmZjlr
+b1JTdlZEbWo2ZzBsMzhXR3dHeWwyeW9GcURzSWNES0VhbTFxQ0gybGxYR0VuajZZNVh4TXhTS25p
+VWZzMEQtUWlZN25LTVVINVZENC1VTDc4d0QxbjB2VlpMM0NRVWJWVXdqeWZ3eVdJVkFDcElxNDNG
+WE9Db1NnSHZpMjY0cm5uZ09TeEliNnY5b3ROX3ZSUGFHQUk0dnZMND4NCg0KSGkgSGFyc2gsDQoN
+CldlIGFyZSBleGNpdGVkIHRvIHNoYXJlIHRoYXQgR2VtaW5pIDMuNiBGbGFzaCAoZ2VtaW5pLTMu
+Ni1mbGFzaCkgYW5kIEdlbWluaSAgDQozLjUgRmxhc2gtTGl0ZSAoZ2VtaW5pLTMuNS1mbGFzaC1s
+aXRlKSBhcmUgbm93IGdlbmVyYWxseSBhdmFpbGFibGUgaW4gdGhlICANCkdlbWluaSBBUEkgYW5k
+IHJlYWR5IGZvciB5b3VyIHByb2R1Y3Rpb24gZW52aXJvbm1lbnRzLg0KDQpHZW1pbmkgMy42IEZs
+YXNoDQoNCjE3JSBtb3JlIHRva2VuLWVmZmljaWVudCB3aXRoIGJldHRlciBxdWFsaXR5IGFuZCBs
+b3dlciBjb3N0IHRoYW4gR2VtaW5pIDMuNSAgDQpGbGFzaC4gT3B0aW1pemVkIGZvciBtdWx0aS1z
+dGVwIG9yY2hlc3RyYXRpb24sIGZ1bGwtc3RhY2sgY29kZSBnZW5lcmF0aW9uLCAgDQphbmQgZ2Vu
+ZXJhbCByZWFzb25pbmcuDQoNClJlZHVjZWQgIA0KcHJpY2luZzxodHRwczovL2MuZ2xlL0FLTWVl
+MGNlOG1IUEZ4czJzM3lkT2UtdlpZVThhUVRyTFdGaThQZ3ZEZ2s0VmctVmNtQ3RKYmZWSFJ0WkxN
+dXhWbEVYZC14dGpoVVZpTmNuZjB1YlpzY2dSUjBhdS1CN3JGOThJVVJqOWV5SmZDaWJ2T3BTdDVt
+bzBqazBtaUI1WmVsQzdMdkFYWnh1aklZamFrenJYdHVmSGJnMllJbUJmMk1zTlBtTE9wMHFUa2cy
+Vk9JZ0EwWVJQRTRNZ2JrVXNFND46wqBMb3dlciAgDQpvdXRwdXQgdG9rZW4gY29zdHMgKCQ3LjUw
+LzFNIHZzLiAkOS4wMC8xTSBmb3IgMy41IEZsYXNoKSwgbWFpbnRhaW5pbmcgaW5wdXQgIA0KdG9r
+ZW5zIGF0ICQxLjUwLzFNLg0KDQpHZW1pbmkgMy41IEZsYXNoLUxpdGUNCg0KT3VyIGZhc3Rlc3Qg
+YW5kIG1vc3QgY29zdC1lZmZpY2llbnQgMy41IG1vZGVsLCBkZXNpZ25lZCB0byBzY2FsZSBhZ2Vu
+dGljICANCndvcmtmbG93cyB0aGF0IGRlbWFuZCBzdXBlciBmYXN0IGluZmVyZW5jZS4NCg0KR2V0
+IGZ1bGwgJ1doYXQncyBOZXcnICANCmJyZWFrZG93bjxodHRwczovL2MuZ2xlL0FLTWVlMGVJYlVy
+VzhOZmNxRGhGVkhjLTRBNFZJNm1Sa01vNC1wOE5qWHp4Slh4dk1KRGpMRXl6STV4THpYLWhkRi1i
+TGM2TjhwWm93U3RBQzFGU3EySWRoaTdqb3lJMDNEQk5VZzdXMzNZZVVsLXFjMGhoSmJIWlBHQlNa
+VWpyQ3RERk1YaExjdUU5aFlPd2VWREZkOEdlQ1VrQkM3NWJKQjBoZjRLOGROcmUydjl0UzVWUnBy
+S0VRZzJSNHhUaFZtND4NCg0KQWJzdHJhY3QgZGFyayBpbnRlcmZhY2UgZ3JhcGhpYyB3aXRoIGds
+b3dpbmcgdGlsZXMgZmVhdHVyaW5nIGxvY2ssIHNlYXJjaCwgIA0Kc2V0dGluZ3MsIGRvY3VtZW50
+LCBhbmQgY3Vyc29yICANCmljb25zLjxodHRwczovL2MuZ2xlL0FLTWVlMGZiMzlGRjEzNzdzYlhh
+UG5QbEY2R01uOFlJbXN1Z0hKcjJLU05NQVNaUjRoUXJ4LTBySnVuUUlMOXU3MjZPLWFYVnZrYzdV
+cWhiSVRtdHhPa1ZfMEFFaWI1Y0dWNEV5cV84aHJHNlZzZ3ZUdWh5LVZyWmxfSTZ4QTJaRWVWTWxk
+WEJiNW5WUmpPVVQ1b180dzY0cnlKRUFUeFlkRHA2TWw5a2xYUUREUTVJSDBfZE1teUw+DQoNCkNv
+bXBhcmUgbW9kZWxzIGluIHRoZSBkZW1vIGFwcA0KDQpCdWlsdCB3aXRoIEdlbWluaSBtYW5hZ2Vk
+IGFnZW50cyBhbmQgdGhlIGxhdGVzdCBGbGFzaCBtb2RlbHMgaW4gR29vZ2xlIEFJICANClN0dWRp
+by4NCg0KVHJ5IGluIHRoZSBkZW1vICANCmFwcDxodHRwczovL2MuZ2xlL0FLTWVlMGNMOTczQTNp
+bkVFUFBkbnUzMjQ2Tl9DdS1VLVJzUzYzTk00SEZWUjRUdHNiX1JQMUZuZjlna3ZPYmFfZVY4alhj
+TFhRMllNQVZsbzd3Q3R6cGRzNUF0aUdldVdPcGo0aWtKUHo0LWFEX1dSVm9KM1BZTE0tdVpFOVMx
+WkM2UTY3ZmtKajNqU0lFSENFenZ6ZW1ZSHNyMmN5NjlGY0RHQk42QWxlR1dzSE1rYVpVZT4NCg0K
+U3RhcnQgYnVpbGRpbmcNCg0KWW91IGNhbiB1c2Ugb3VyIFNES3MgZm9yIFB5dGhvbiwgSmF2YVNj
+cmlwdCwgYW5kIEdvLCBvciBtYWtlIGEgZGlyZWN0IFJFU1QgIA0KQVBJIGNhbGwgd2l0aCBjVVJM
+LiBHZXQgeW91ciBwYWlkIEFQSSAgDQprZXk8aHR0cHM6Ly9jLmdsZS9BS01lZTBmeGlzV093ZjdL
+WHlFZWgtSzdmdkY4a1llcmQ4TVR4emF4bFJQcVg3TWEybnpfLTB6OXZwaGljX1preFd0WUhRRGJu
+aEMxMkNSYUJkcmltWHZFZ0gzT2RuSk11T3hDMlpac0ZIRkhWZ1FrSXFxdjVBcXRfZWFDU3hzQ1FT
+b2RjbVBEeElITVJrWkFfRG54UEttTlJHMXgzUEM0a2RJb1hoOD4gIA0KYW5kIHN0YXJ0IGNyZWF0
+aW5nLg0KDQpmcm9tIGdvb2dsZSBpbXBvcnQgZ2VuYWkNCg0KY2xpZW50ID0gZ2VuYWkuQ2xpZW50
+KCkNCg0KIyBCdWlsZCB3aXRoIEZsYXNoDQoNCmludGVyYWN0aW9uID0gY2xpZW50LmludGVyYWN0
+aW9ucy5jcmVhdGUoDQoNCm1vZGVsPSJnZW1pbmktMy42LWZsYXNoIiwNCg0KaW5wdXQ9IkRvIHNv
+bWV0aGluZyBjb29sLiIsDQoNCikNCg0KcHJpbnQoaW50ZXJhY3Rpb24ub3V0cHV0X3RleHQpDQoN
+CiMgQnVpbGQgd2l0aCBGbGFzaC1MaXRlDQoNCmludGVyYWN0aW9uID0gY2xpZW50LmludGVyYWN0
+aW9ucy5jcmVhdGUoDQoNCm1vZGVsPSJnZW1pbmktMy41LWZsYXNoLWxpdGUiLA0KDQppbnB1dD0i
+RG8gc29tZXRoaW5nIGNvb2wgd2l0aCB0aGVzZSA1MCBpdGVtcy4iLA0KDQopDQoNCnByaW50KGlu
+dGVyYWN0aW9uLm91dHB1dF90ZXh0KQ0KDQpEb2N1bWVudGF0aW9uDQoNCkV4cGxvcmUgYWxsIG1v
+ZGVsIGZlYXR1cmVzLCB0ZWNobmljYWwgZGV0YWlscywgYW5kIHByb21wdGluZyBndWlkZXMuDQoN
+ClJlYWQgdGhlICANCmRvY3M8aHR0cHM6Ly9jLmdsZS9BS01lZTBlblBMLTZFc1JhZXlxTGVaQmJV
+M1pseHVXUmJpWHlBZW5qLXlhTktlX3ozX0NudU9KWWV0ZWJ1OHR5QTZMRmtyVzl5MFdGMmo5RDEx
+ZWh3VXZIRDlFNWhlaEFLa05KTWhCRFQzU3RWakhTc2Nxd0hVcEdTVlZfZWxNQWdzdTN4cVhpMnJo
+aGw5WVlRTmd1Z1lSVGVIdlZENEdfWU43M1ZVZ0YwSEl5Y21Wc0VoSVA+DQoNClByaWNpbmcNCg0K
+UmV2aWV3IGFsbCBwcmljaW5nIHRpZXJzLCB0b2tlbiBsaW1pdHMsIGFuZCBkZXRhaWxlZCBBUEkg
+Y29zdCBicmVha2Rvd25zLg0KDQpTZWUgIA0KcHJpY2luZzxodHRwczovL2MuZ2xlL0FLTWVlMGVT
+NjV1Snh2dlJSY1hMdEVmRDR2TmtQdVNKUEtuVjAyN2MwOEpQNGtpOVVpMGdrMVVuVnpUOXFEbmhi
+RHhhbEU4b2ZkZzVPeTh3YWpuQUh3R3YxVTE2ejBmZU5EVmF3RWlWSDVqT2MwQmVKelRGcnB5Tk1k
+ZTVMLU9kR21ZSjMzODQtMTlIR1NUQmpReU92WUVBRTZxSU5LSWdsYXVMTUs5Q1I5alhOMThJT0Q3
+SHRBQldrTEEtNXc+DQoNCkhhcHB5IGJ1aWxkaW5nLA0KDQpUaGUgR29vZ2xlIEFJIFN0dWRpbyB0
+ZWFtDQoNCi0gUHJvbXB0ICANCm1vZGVsczxodHRwczovL2MuZ2xlL0FLTWVlMGQwc1B4WXdEdjYy
+cW5SeENOZ3I4NVhHOXZ2WGNkaHJ5UmVaRTVyQ3JVVlFKRlkwbi1VbFcwN1l4TkxSZmFtSk9IZEgw
+ampmRE1LVDFCam1SOGJtOVpkbXZ3RVB0X0JCb25TVjdzTmdTN3dPclBFTXlod3kyaFBKaDBfc2U1
+UTJsQjVLdFNQenN0d1ZYa29kbi1xSHJKbWp0MGZNbm1wdGtpUlk4eUdSNUlybndXZ2dldy1XOGFi
+ODNDc3ZvejM1RThwT0tlWXo4bExyeF9RcVdiSzIwSFVvcHluakRISGtoUGU1SlpjQ294N2ZyWVE2
+MzJZRWhoSm12ZEtQR2d0Pg0KDQotIE1hbmFnZSBBUEkgIA0Ka2V5czxodHRwczovL2MuZ2xlL0FL
+TWVlMGRrRHk4SGVKT20wd2tUbDhWU0x5YkRBZ0c2VW9lWjJhaVVuelB5ek0zdHNualAwdzlLbHFi
+WjVlWHhZdmdWMnRKRFRncUZYVmZnanBDLVRWX01mbTNHMGxXbHRmQ3ZJZ3ZXX2xtYi1BUmdvb18t
+WFFiVHRGTXB5clJabGNsLVFoQmRCVDZRazRDay1CcnlRWnVoNXVsd2dQblNwUjVXTklqdk4tdlBS
+VXJMcklEeGFaX2loVGp5X2VsbEtoVWljTW5YWmZWdWFnRTNMbGpWcW9kS2loVWhONWFyU2E2M1Z1
+dnVFRnFKNVk1ZW85TT4NCg0KLSBWaWJlICANCmNvZGU8aHR0cHM6Ly9jLmdsZS9BS01lZTBjZHdE
+MkUwVUxqM0JEaVhnbTJwSFhLZkd6eHBNS2p2YWRSTVc0ZE9DSVZzZ3FaLTJrZWprYjhpMGtwVDVa
+My05MU9fbEx5dVkzZVJneGtubWdaTU1ReWxROWVrbmNuNjBiSkFyMzBfZzZvWFpFZUxQdjU4dFNr
+eTdwWG5EdUU3b2Rmek5vQlNTa0tHLVNwZ1g5OHdwMFhIUW5KcHBMX2k3SnYxN0ZPZVRVNUQ1Y1li
+Ymw5R2Mwa04zQkJVSnd2dE1IVWx3MnVLSWRZejdBM0RWejlTSS1SQ0VqdTdHSGVfSENHR1E+DQoN
+Ci0gTGF0ZXN0IHByb2R1Y3QgIA0KdXBkYXRlczxodHRwczovL2MuZ2xlL0FLTWVlMGVfX3RYWnUx
+UXkwcGgzZVZfUDNWeGN0NC1FeDh6TXZTdGhQNGlmTThrUkNWV2VqUmxETnJCNFdVY3BoTkFrejNN
+a3BPd3YtZXVqTzJWWHljdERYclMxMExsdTFVRDZIRE5SMFp5dThLY1J1OWRGSEllZUlnd25Lcm9z
+aW93TlVaMUR6Q0hWcDhBWC1NZG5SR3QzX2hsNTh4UDQ+DQoNCi0gVXBjb21pbmcgZ2xvYmFsICAN
+CmV2ZW50czxodHRwczovL2MuZ2xlL0FLTWVlMGU0YnUtQlpwbklNaTlxMTJhNGh5eWs2V1FQcDd6
+anY1bVNTQmxYMW1GLTU3emFDTDdaV0JHdWx1UWtKeGpYQkNCeWNmSGF1b0U3ZHpXbDZ3ZS1mNmx1
+SFlfVWRMR3hxejJ1c2hsZ291eVNiWm1rYXZsU1B5UGRraklMR1dnTG1CZVViZm5NVTZEMG54MFhJ
+ZVdqX1RYcj4NCg0KwqkgMjAyNiBHb29nbGUgTExDIDE2MDAgQW1waGl0aGVhdHJlIFBhcmt3YXks
+IE1vdW50YWluIFZpZXcsIENBIDk0MDQzLCBVU0ENCg0KVGhpcyBlbWFpbCB3YXMgc2VudCB0byBo
+YXJzaGtzaW5naDg5N0BnbWFpbC5jb20gYmVjYXVzZSB5b3Ugc2lnbmVkIHVwIHRvICANCnJlY2Vp
+dmUgZW1haWxzIGFib3V0IEdvb2dsZSBBSS4gSWYgeW91IGRvIG5vdCB3aXNoIHRvIHJlY2VpdmUg
+dGhlc2UgZW1haWxzLCAgDQpwbGVhc2UgIA0KdW5zdWJzY3JpYmU8aHR0cHM6Ly9teWFjY291bnQu
+Z29vZ2xlLmNvbS9jb21tdW5pY2F0aW9uLXByZWZlcmVuY2VzL3Vuc3Vic2NyaWJlL2d0L0FLTWVl
+MGMzSS1JNnBqdk5KMXVKdVNEQWhIWEM1bkpoNmRKS3pMX3QxSElYbGt0ZmF4WDFqcDFkQ3B5Y1BQ
+WWxLcUUwWGtFMGRuRWhZZU5tamRaZmJ2TUdIdHl4SzROSHpBNW5UajAydHlaeXY0eTBTcGxuQU40
+cXJWZHhTNUJSTy1DdjVqWWVvbDBNSlZyaEpXNDVDNl9VeWZzV1R5c2R3cF94Q015VkNZZV92N2lZ
+QXhQZDV2UDlwcEU3UzFkMmg3OWFua21ud3ZROElfVnZsZ0lndXAwM2QtUWVDLXJxRlFrMnJmeXNO
+bUswdHYxaFVJTHZFQT91dG1fc291cmNlPWdtJnV0bV9tZWRpdW09ZW1haWwmYXV0bz10cnVlPi4N
+Cg==
+--000000000000bca8b706572e8e00
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html> <html lang=3Den xmlns=3Dhttp://www.w3.org/1999/xhtml xmlns:=
+v=3Durn:schemas-microsoft-com:vml xmlns:o=3Durn:schemas-microsoft-com:offic=
+e:office> <head> <title>Build more with new token-efficient, lower-cost mod=
+els</title> <!--[if !mso]> <!-- --> <meta http-equiv=3DX-UA-Compatible cont=
+ent=3DIE=3Dedge> <!--<![endif]--> <meta http-equiv=3DContent-Type content=
+=3D"text/html; charset=3DUTF-8"> <meta name=3Dviewport content=3Dwidth=3Dde=
+vice-width,initial-scale=3D1> <style type=3Dtext/css> #outlook a { padding:=
+ 0; } table { border-spacing: 0; } img { border: 0; height: auto; line-heig=
+ht: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bic=
+ubic; } p { display: block; } </style> <!--[if mso]> <xml> <o:OfficeDocumen=
+tSettings xmlns:o=3D"urn:schemas-microsoft-com:office:office"> <o:AllowPNG/=
+> <o:PixelsPerInch> 96 </o:PixelsPerInch> </o:OfficeDocumentSettings> <w:Wo=
+rdDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word"> <w:DontUseAdv=
+ancedTypographyReadingMail/> </w:WordDocument> </xml> <style type=3D"text/c=
+ss"> table { border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace=
+:0pt; } .mj-outlook-group-fix { width:100% !important; } </style> <![endif]=
+--> <!--[if !mso]> <!--> <link href=3Dhttps://client-data.knak.io/productio=
+n/company_data/608c388d87e9e/custom-fonts/62b086f5c0cbf/fonts.css rel=3Dsty=
+lesheet type=3Dtext/css> <link href=3Dhttps://client-data.knak.io/productio=
+n/company_data/608c388d87e9e/custom-fonts/62b2173770124/fonts.css rel=3Dsty=
+lesheet type=3Dtext/css> <link href=3Dhttps://client-data.knak.io/productio=
+n/company_data/608c388d87e9e/custom-fonts/62b086f5c0cbf/fonts.css rel=3Dsty=
+lesheet type=3Dtext/css> <style type=3Dtext/css> @import url(https://fonts.=
+googleapis.com/css?family=3DRoboto:100,300,400,500,700|Google+Sans:400,500,=
+700|Google+Sans+Display:400,500,700|Open+Sans:400,500,700); @import url(htt=
+ps://client-data.knak.io/production/company_data/608c388d87e9e/custom-fonts=
+/62b086f5c0cbf/fonts.css); @import url(https://client-data.knak.io/producti=
+on/company_data/608c388d87e9e/custom-fonts/62b2173770124/fonts.css); @impor=
+t url(https://client-data.knak.io/production/company_data/608c388d87e9e/cus=
+tom-fonts/62b086f5c0cbf/fonts.css); </style> <!--<![endif]--> <style type=
+=3Dtext/css> @media only screen and (min-width:950px) { .mj-column-per-100 =
+{ width: 100% !important; max-width: 100%; } .mj-column-per-50 { width: 50%=
+ !important; max-width: 50%; } .mj-column-per-10 { width: 10% !important; m=
+ax-width: 10%; } .mj-column-per-90 { width: 90% !important; max-width: 90%;=
+ } .mj-column-per-38 { width: 38% !important; max-width: 38%; } .mj-column-=
+per-35 { width: 35% !important; max-width: 35%; } .mj-column-per-27 { width=
+: 27% !important; max-width: 27%; } .mj-column-per-30 { width:30% !importan=
+t; max-width: 30%; } .mj-column-per-70 { width:70% !important; max-width: 7=
+0%; } } </style> <style type=3Dtext/css> body, .body { margin: 0; padding: =
+0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; } .links-1A7=
+3E8-underline a { color: #1A73E8; text-decoration: underline; } #body #main=
+ [x-apple-data-detectors-type] { color: inherit !important; -webkit-text-de=
+coration-color: inherit !important; text-decoration: inherit !important; fo=
+nt-weight: inherit !important; } [data-ogsc] .img-container img:hover, [dat=
+a-ogsb] .img-container img:hover { background-color: transparent !important=
+ } .mso-button-dark-mode a { background: transparent !important; } .links-8=
+AB4F8-underline a { color: #8AB4F8; text-decoration: underline; } u~div .im=
+g-container img+div { display: none } .links-8AB4F8 a { color: #8AB4F8; tex=
+t-decoration: none; } .links-4285F4 a { color: #4285F4; text-decoration: no=
+ne; } u~div ul, u~div ol { margin-left: -3px } .links-5F6368 a { color: #5F=
+6368; text-decoration: none; } @media only screen and (min-width:950px) { .=
+padding-24px-28px-24px-28px { padding: 24px 28px 24px 28px !important } .he=
+ight-32px { height: 32px !important } .line-height-32px { line-height: 32px=
+ !important } .padding-0px-28px-0px-28px { padding: 0px 28px 0px 28px !impo=
+rtant } .padding-0px-0px-0px-8px { padding: 0px 0px 0px 8px !important } .t=
+ext-align-left { text-align: left !important } .padding-0px-35px-0px-35px {=
+ padding: 0px 35px 0px 35px !important } .height-48px { height: 48px !impor=
+tant } .line-height-48px { line-height: 48px !important } .padding-0px-30px=
+-0px-30px { padding: 0px 30px 0px 30px !important } .height-30px { height: =
+30px !important } .line-height-30px { line-height: 30px !important } .paddi=
+ng-0px-0px-0px-0px { padding: 0px 0px 0px 0px !important } .img-full-width =
+{ max-width: 100% !important } .padding-0px-0px-0px-16px { padding: 0px 0px=
+ 0px 16px !important } .height-24px { height: 24px !important } .line-heigh=
+t-24px { line-height: 24px !important } .padding-24px { padding: 24px !impo=
+rtant } .padding-0px-10px-0px-0px { padding: 0px 10px 0px 0px !important } =
+.padding-0px-28px-16px-28px { padding: 0px 31px 16px 28px !important } .pad=
+ding-0px-35px-16px-28px { padding: 0px 35px 16px 28px !important } .padding=
+-0px-0px-0px-10px { padding: 0px 0px 0px 10px !important } .padding-16px-70=
+px-16px-70px { padding: 16px 70px 16px 70px !important } .padding-0px-19px-=
+0px-0px { padding: 0px 19px 0px 0px !important } .padding-0px-0px-0px-37px =
+{ padding: 0px 0px 0px 37px !important } .padding-0px-50px-0px-50px { paddi=
+ng: 0px 50px 0px 50px !important } .padding-16px-60px-16px-60px { padding: =
+16px 60px 16px 60px !important } .padding-0px-0px-0px-63px { padding: 0px 0=
+px 0px 63px !important } .padding-0px-15px-0px-29px { padding: 0px 15px 0px=
+ 29px !important } .padding-40px-28px-40px-28px { padding: 40px 28px 40px 2=
+8px !important } .padding-16px-20px-16px-30px { padding: 16px 20px 16px 30p=
+x !important; } .padding-24px-20px-12px-0px { padding: 24px 20px 12px 0px !=
+important; } } @media only screen and (max-width:737px) { .geist-font { fon=
+t-family: menlo, monospace !important; } } </style> <style type=3Dtext/css>=
+ ul { display: block; } sup, sub { line-height: 0; } body a { text-decorati=
+on: none; color: #1A73E8; } .image-highlight { transition: 0.3s; } .image-h=
+ighlight:hover { filter: brightness(1.2); } @media only screen and (min-wid=
+th: 950px) { .hide-on-mobile { display: block !important; } .hide-on-deskto=
+p { display: none !important; } } .hide-on-desktop { display: block; } .hid=
+e-on-mobile { display: none; } </style> <!--[if mso]> <style> .hide-on-mobi=
+le {display:block !important} </style> <![endif]--> <!--[if mso]> <style> .=
+text-align-left { text-align: left !important} .mso-text-align-left { text-=
+align: left !important; } .ul-0aaac300-83f7-11f1-89b5-1514a8dd340e li { mar=
+gin-left: -17px !important; text-indent: -27px; } .ul-0aaac300-83f7-11f1-89=
+b5-1514a8dd340e li li { margin-left: -47px !important; text-indent: -17px; =
+} .ul-0aaac300-83f7-11f1-89b5-1514a8dd340e li.level1 { mso-bullet-image: 'h=
+ttps://gstatic.com/growthlab/api/Kb20ctIwf0obdcjzG62bXDGOwiuvGVa4JyZhdZyo.p=
+ng'; mso-ansi-font-size: 23px; mso-line-height-alt: 131%; } .ul-0aaac300-83=
+f7-11f1-89b5-1514a8dd340e .list-item { mso-ansi-font-size: 14px !important;=
+ } .ul-0aaac300-83f7-11f1-89b5-1514a8dd340e li li { mso-ansi-font-size: 14p=
+x !important; } ul li { tab-stops: 100%; } .image-list { margin-left: -8px;=
+ } .image-list li.level1 { mso-special-format: bullet; vertical-align: midd=
+le; margin: 0; } .ul-0aac2290-83f7-11f1-89b5-1514a8dd340e li { margin-left:=
+ -15px !important; text-indent: -29px; } .ul-0aac2290-83f7-11f1-89b5-1514a8=
+dd340e li li { margin-left: -47px !important; text-indent: -17px; } .ul-0aa=
+c2290-83f7-11f1-89b5-1514a8dd340e li.level1 { mso-bullet-image: 'https://gs=
+tatic.com/growthlab/api/Y6PRB1oNvYv8cj568kgliVq0gZZE1lGSHIjaiZd9.png'; mso-=
+ansi-font-size: 23px; mso-line-height-alt: 131%; } .ul-0aac2290-83f7-11f1-8=
+9b5-1514a8dd340e .list-item { mso-ansi-font-size: 14px !important; } .ul-0a=
+ac2290-83f7-11f1-89b5-1514a8dd340e li li { mso-ansi-font-size: 14px !import=
+ant; } .ul-0aad5b10-83f7-11f1-89b5-1514a8dd340e li { margin-left: -18px !im=
+portant; text-indent: -26px; } .ul-0aad5b10-83f7-11f1-89b5-1514a8dd340e li =
+li { margin-left: -47px !important; text-indent: -17px; } .ul-0aad5b10-83f7=
+-11f1-89b5-1514a8dd340e li.level1 { mso-bullet-image: 'https://gstatic.com/=
+growthlab/api/1egiT4SOCELtF0oyggwB2CW23RW0OTn2QVkiLqkv.png'; mso-ansi-font-=
+size: 24px; tab-stops: 24px; mso-line-height-alt: 131% } .ul-0aad5b10-83f7-=
+11f1-89b5-1514a8dd340e .list-item { mso-ansi-font-size: 14px !important; } =
+.ul-0aad5b10-83f7-11f1-89b5-1514a8dd340e li li { mso-ansi-font-size: 14px !=
+important; } .ul-0aafa500-83f7-11f1-89b5-1514a8dd340e li { margin-left: -17=
+px !important; text-indent: -27px; } .ul-0aafa500-83f7-11f1-89b5-1514a8dd34=
+0e li li { margin-left: -47px !important; text-indent: -17px; } .ul-0aafa50=
+0-83f7-11f1-89b5-1514a8dd340e li.level1 { mso-bullet-image: 'https://gstati=
+c.com/growthlab/api/sR9yy0EpO2nJy0cschY84FQjJRsKKYGoGMctvPKY.png'; mso-ansi=
+-font-size: 23px; mso-line-height-alt: 131%; } .ul-0aafa500-83f7-11f1-89b5-=
+1514a8dd340e .list-item { mso-ansi-font-size: 14px !important; } .ul-0aafa5=
+00-83f7-11f1-89b5-1514a8dd340e li li { mso-ansi-font-size: 14px !important;=
+ } .ul-0ab0dd80-83f7-11f1-89b5-1514a8dd340e li { margin-left: -15px !import=
+ant; text-indent: -29px; } .ul-0ab0dd80-83f7-11f1-89b5-1514a8dd340e li li {=
+ margin-left: -47px !important; text-indent: -17px; } .ul-0ab0dd80-83f7-11f=
+1-89b5-1514a8dd340e li.level1 { mso-bullet-image: 'https://gstatic.com/grow=
+thlab/api/7G6c5xo0NBw9srnCK4dAzr20vTeokvy6CHS0Lv4W.png'; mso-ansi-font-size=
+: 23px; mso-line-height-alt: 131%; } .ul-0ab0dd80-83f7-11f1-89b5-1514a8dd34=
+0e .list-item { mso-ansi-font-size: 14px !important; } .ul-0ab0dd80-83f7-11=
+f1-89b5-1514a8dd340e li li { mso-ansi-font-size: 14px !important; } </style=
+> <![endif]--> <style> [class~=3D"x_body"] { width: 99.9% } @supports(--css=
+:variables) { td[style*=3D"border-radius"] { -webkit-filter: drop-shadow(0 =
+0 1px transparent); } table[style*=3D"border-radius"] { -webkit-filter: dro=
+p-shadow(0 0 1px transparent); } } </style> </head> <div style=3D"white-spa=
+ce: normal;"> <body style=3Dword-spacing:normal;background-color:#000000; c=
+lass=3Dbody id=3Dbody> <!--[if !mso 9]> <!--> <div id=3DemailPreHeader styl=
+e=3D"display: none;">Build more with new token-efficient, lower-cost models=
+.</div> <div style=3D"display: none;"> &#8199;&#8199;&#8199;&#8199;&#8199;&=
+#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199=
+;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#81=
+99;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#=
+8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;&#8199;=
+&#8199;&#8199; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#81=
+99;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#=
+847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; =
+&#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#819=
+9;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8=
+205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&=
+#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847;=
+ &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#81=
+99;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#=
+847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; =
+&#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#819=
+9;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8=
+205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&=
+#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847;=
+ &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#81=
+99;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#=
+847; &#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; =
+&#8199;&#8205;&#847; &#8199;&#847; &#8199;&#8205;&#847; &#8199;&#847; &#819=
+9;&#8205;&#847; &#8199;&#847; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&z=
+wnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zw=
+nj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwn=
+j; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj=
+; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj;=
+ &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; =
+&shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &=
+shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &s=
+hy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &sh=
+y; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy=
+; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy;=
+ &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; =
+&shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &=
+shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &s=
+hy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &sh=
+y; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy=
+; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy;=
+ &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; =
+&shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &=
+shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &s=
+hy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &sh=
+y; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy=
+; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy;=
+ &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; =
+&shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &=
+shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &s=
+hy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &sh=
+y; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy=
+; &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy;=
+ &#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; =
+&#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &=
+#847;&zwnj; &shy; &shy; &shy; &shy; &#847;&zwnj; &shy; &shy; &shy; &shy; &#=
+847;&zwnj; &shy; &shy; &shy; &shy; &nbsp;</div> <!--<![endif]--> <div style=
+=3D"background-color:#000000;background-position:center center;background-s=
+ize:auto;background-repeat:repeat;" id=3Dmain> <table align=3Dcenter border=
+=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbackground=
+-color:#F1F3F4;width:100%; class=3Dsection> <tr> <td align=3Dcenter> <div r=
+ole=3Dpresentation> <!--[if mso | IE]> <table align=3D"center" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" class=3D"hide-on-mobile-outlook block-=
+grid-outlook" style=3D"width:640px;" width=3D"640" > <tr> <td style=3D"line=
+-height:0px;font-size:0px;mso-line-height-rule:exactly;"> <![endif]--> <div=
+ style=3D"background:transparent;background-color:transparent;margin:0 auto=
+;max-width:640px;"> <table align=3Dcenter border=3D0 cellpadding=3D0 cellsp=
+acing=3D0 role=3Dpresentation style=3Dbackground-color:transparent;width:10=
+0%;> <tr> <td style=3D"display: none; font-size: 0px; padding: 5px 0px 5px =
+0px; text-align: center; vertical-align: top;" class=3D"hide-on-mobile bloc=
+k-grid" align=3Dcenter valign=3Dtop> <!--[if mso | IE]> <table role=3D"pres=
+entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=
+=3D"vertical-align:top;width:640px;" > <![endif]--> <div class=3D"mj-column=
+-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direct=
+ion:ltr;display:inline-block;vertical-align:top;width:100%;> <table border=
+=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-rad=
+ius:0px;vertical-align:top; width=3D100%> <tr> <td class=3Dtext-container s=
+tyle=3D"font-size:0px;padding:5px 25px 5px 25px;word-break:break-word;text-=
+align:center;"> <div class=3Dlinks-1A73E8-underline> <div style=3D"font-fam=
+ily:'Roboto', 'Open Sans', Arial, sans-serif;font-size:12px;font-weight:500=
+;letter-spacing:none;line-height:1.50;text-align:center;mso-line-height-alt=
+:1.125em;color:#5F6368;"> <p style=3D"margin: 0 0 0px 0;">Email not display=
+ing correctly? <a href=3Dhttps://notifications.google.com/g/vib/AKMee0eJZCd=
+JlOHmn3MCfumEkormnBIVC2urnd8qdXfxoeh4zsee28TWnaEv8N59_hWdjCRuNgGlkZMv-AZLkH=
+Z30DdsqH6UfjfqptPy5qNZP5SLIohP-qbyMrNxK6HwoQrGjZQ target=3D_blank rel=3Dnoo=
+pener style=3D"color: #1967d2; text-decoration: underline;">View in browser=
+</a></span></span></p> </div> </div> </td> </tr> </table> </div> <!--[if ms=
+o | IE]> </td> </tr> </table> <![endif]--> </td> </tr> </table> </div> <!--=
+[if mso | IE]> </td> </tr> </table> <![endif]--> </div> </td> </tr> </table=
+> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dp=
+resentation style=3Dbackground-color:transparent;width:100%; class=3Dsectio=
+n> <tr> <td align=3Dcenter> <div role=3Dpresentation> <!--[if mso | IE]> <t=
+able align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"block-grid-outlook" style=3D"width:640px;" width=3D"640" > <tr> <td st=
+yle=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"> <![end=
+if]--> <div style=3D"background:transparent;background-color:transparent;ma=
+rgin:0 auto;max-width:640px;"> <table align=3Dcenter border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbackground-color:transpare=
+nt;width:100%;> <tr> <td style=3Dfont-size:0px;padding:0px;text-align:cente=
+r;vertical-align:top; class=3Dblock-grid> <!--[if mso | IE]> <table role=3D=
+"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td s=
+tyle=3D"vertical-align:middle;width:640px;" > <![endif]--> <div class=3D"mj=
+-column-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left=
+;direction:ltr;display:inline-block;vertical-align:middle;width:100%;> <tab=
+le border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D1=
+00%> <tr> <td style=3D"border-radius:0px;vertical-align:middle;padding:24px=
+ 30px 24px 30px;mso-padding-alt:24px 28px 24px 28px;" class=3Dpadding-24px-=
+28px-24px-28px> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpr=
+esentation width=3D100%> <tr> <td class=3Dimg-container style=3Dfont-size:0=
+px;padding:0px;word-break:break-word;text-align:center;> <div style=3D"marg=
+in:0 auto;max-width:155px;"> <a href=3Dhttps://c.gle/AKMee0dxV2cyO4_pxehsC6=
+SF086pwprtkE8Wz3rvoIo2pMNf0fKAPnmg6C1aO7aIBg39Bc2EyrZKG2ui2gLwIc6txVxQdwbah=
+K1RUOn3t0yf2x7fw6eeEkj7fHWIX4mgrq-vkpnPBc8LM51sYSFTN5offv2nadgACA target=3D=
+_blank style=3D"text-decoration: none; color: #1A73E8;"> <img alt=3D"Google=
+ AI Studio" height=3Dauto width=3D155 src=3Dhttps://www.gstatic.com/growthl=
+ab/api/xgg7WeByVkKhlvLjGVNtWlvFuFHP6kgnBwZuooUX.png style=3Dborder:none;out=
+line:none;text-decoration:none;height:auto;width:100%;font-size:13px;displa=
+y:block;> </a> </div> </td> </tr> </table> </td> </tr> </table> </div> <!--=
+[if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr> </table> </div=
+> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div> </td> </tr> <=
+/table> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 ro=
+le=3Dpresentation style=3Dwidth:100%; class=3Dsection> <tr> <td align=3Dcen=
+ter> <div role=3Dpresentation> <!--[if mso | IE]> <table align=3D"center" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"block-grid-outlook=
+" style=3D"width:640px;" width=3D"640" > <tr> <td style=3D"line-height:0px;=
+font-size:0px;mso-line-height-rule:exactly;"> <![endif]--> <div style=3D"ma=
+rgin:0 auto;max-width:640px;"> <table align=3Dcenter border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%;> <tr> <td styl=
+e=3Dfont-size:0px;padding:0px;text-align:center;vertical-align:top; class=
+=3Dblock-grid> <!--[if mso | IE]> <table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"vertical-align:top;=
+width:640px;" > <![endif]--> <div class=3D"mj-column-per-100 mj-outlook-gro=
+up-fix" style=3Dfont-size:0px;text-align:left;direction:ltr;display:inline-=
+block;vertical-align:top;width:100%;> <table border=3D0 cellpadding=3D0 cel=
+lspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical-align:t=
+op; width=3D100%> <tr> <td style=3Dfont-size:0px;word-break:break-word;> <d=
+iv style=3Dline-height:20px;height:20px;mso-line-height-alt:32px; class=3D"=
+height-32px line-height-32px">&nbsp; </div> </td> </tr> </table> </div> <!-=
+-[if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr> </table> </di=
+v> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div> </td> </tr> =
+</table> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 r=
+ole=3Dpresentation style=3Dbackground-color:transparent;width:100%; class=
+=3Dsection> <tr> <td align=3Dcenter> <div role=3Dpresentation> <!--[if mso =
+| IE]> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"block-grid-outlook" style=3D"width:640px;" width=3D"640" > =
+<tr> <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactl=
+y;"> <![endif]--> <div style=3D"background:transparent;background-color:tra=
+nsparent;margin:0 auto;max-width:640px;"> <table align=3Dcenter border=3D0 =
+cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbackground-colo=
+r:transparent;width:100%;> <tr> <td style=3D"font-size:0px;padding:0px 0px =
+0px 0px;text-align:center;vertical-align:top;mso-padding-alt:0px 0px 0px 0p=
+x;" class=3Dblock-grid> <!--[if mso | IE]> <table role=3D"presentation" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"vertical-a=
+lign:top;width:640px;" > <![endif]--> <div class=3D"mj-column-per-100 mj-ou=
+tlook-group-fix" style=3Dfont-size:0px;text-align:left;direction:ltr;displa=
+y:inline-block;vertical-align:top;width:100%;> <table border=3D0 cellpaddin=
+g=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td style=3D"b=
+order-radius:0px;vertical-align:top;padding:0px 30px 0px 30px;mso-padding-a=
+lt:0px 28px 0px 28px;" class=3Dpadding-0px-28px-0px-28px> <table border=3D0=
+ cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td=
+ class=3Dtext-container style=3D"font-size:0px;padding:0px 0px 0px 0px;word=
+-break:break-word;mso-padding-alt:0px 0px 0px 0px;text-align:center;"> <div=
+ class=3Dlinks-1A73E8-underline> <div style=3D"font-family:'Google Sans', '=
+Roboto', Arial, sans-serif;font-weight:normal;letter-spacing:none;text-alig=
+n:center;color:#F8FAFD;"> <h1 style=3D"margin: 0; font-size: 30px; font-wei=
+ght: 400; line-height: 1.2; mso-line-height-alt: 2.25em"> <span style=3D"fo=
+nt-size: 30px;">Build more with new token-efficient, lower-cost models</spa=
+n> </h1> </div> </div> </td> </tr> <tr> <td style=3Dfont-size:0px;word-brea=
+k:break-word;> <div style=3Dline-height:14px;height:14px;mso-line-height-al=
+t:14px;> &nbsp;</div> </td> </tr> </table> </td> </tr> </table> </div> <!--=
+[if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr> </table> </div=
+> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div> </td> </tr> <=
+/table> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 ro=
+le=3Dpresentation style=3Dbackground-color:transparent;width:100%; class=3D=
+section> <tr> <td align=3Dcenter> <div role=3Dpresentation> <!--[if mso | I=
+E]> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" class=3D"block-grid-outlook" style=3D"width:640px;" width=3D"640" > <tr> =
+<td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"> =
+<![endif]--> <div style=3D"background:transparent;background-color:transpar=
+ent;margin:0 auto;max-width:640px;"> <table align=3Dcenter border=3D0 cellp=
+adding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbackground-color:tra=
+nsparent;width:100%;> <tr> <td style=3D"font-size:0px;padding:0px 0px 0px 0=
+px;text-align:center;vertical-align:top;mso-padding-alt:0px 0px 0px 0px;" c=
+lass=3Dblock-grid> <!--[if mso | IE]> <table role=3D"presentation" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"vertical-alig=
+n:top;width:640px;" > <![endif]--> <div class=3D"mj-column-per-100 mj-outlo=
+ok-group-fix" style=3Dfont-size:0px;text-align:left;direction:ltr;display:i=
+nline-block;vertical-align:top;width:100%;> <table border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td style=3D"bo=
+rder-radius:0px;vertical-align:top;padding:0px 30px 0px 30px;mso-padding-al=
+t:0px 28px 0px 28px;" class=3Dpadding-0px-28px-0px-28px> <table border=3D0 =
+cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td =
+class=3Dtext-container style=3D"font-size:0px;padding:0px 0px 0px 0px;word-=
+break:break-word;mso-padding-alt:0px 0px 0px 0px;text-align:center;"> <div =
+class=3Dlinks-1A73E8-underline> <div style=3D"font-family:'Google Sans Text=
+', Roboto, sans-serif;font-size:16px;font-weight:normal;letter-spacing:none=
+;line-height:1.5;text-align:center;mso-line-height-alt:1.5em;color:#E8EAED;=
+"> <p style=3D"margin: 0;"> Introducing Gemini 3.6 Flash and 3.5 Flash-Lite=
+ in the Gemini API</p> </div> </div> </td> </tr> <tr> <td style=3Dfont-size=
+:0px;word-break:break-word;> <div style=3Dline-height:24px;height:24px;mso-=
+line-height-alt:24px;> &nbsp;</div> </td> </tr> </table> </td> </tr> </tabl=
+e> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr> =
+</table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div>=
+ </td> </tr> </table> <table align=3Dcenter border=3D0 cellpadding=3D0 cell=
+spacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection> <tr> <=
+td align=3Dcenter> <div role=3Dpresentation> <!--[if mso | IE]> <table alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"bloc=
+k-grid-outlook" style=3D"width:640px;" width=3D"640" > <tr> <td style=3D"li=
+ne-height:0px;font-size:0px;mso-line-height-rule:exactly;"> <![endif]--> <d=
+iv style=3D"margin:0 auto;max-width:640px;"> <table align=3Dcenter border=
+=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%=
+;> <tr> <td style=3Dfont-size:0px;padding:0px;text-align:center;vertical-al=
+ign:top; class=3Dblock-grid> <!--[if mso | IE]> <table role=3D"presentation=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"verti=
+cal-align:top;width:640px;" > <![endif]--> <div class=3D"mj-column-per-100 =
+mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direction:ltr;d=
+isplay:inline-block;vertical-align:top;width:100%;> <table border=3D0 cellp=
+adding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td style=
+=3D"border-radius:0px;vertical-align:top;padding:0px 30px 0px 30px;mso-padd=
+ing-alt:0px 28px 0px 28px;" class=3Dpadding-0px-28px-0px-28px> <table borde=
+r=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr=
+> <td> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 rol=
+e=3Dpresentation style=3Dwidth:100%; class=3Dsection> <tr> <td align=3Dcent=
+er style=3Dfont-size:0px;text-align:center;vertical-align:top;padding:0px;w=
+ord-break:break-word;> <div role=3Dpresentation> <!--[if mso | IE]> <table =
+align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td=
+> <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0"> <tr> <td style=3D"vertical-align:top;width:292px;" > <![endif]--> <=
+div class=3D"mj-column-per-50 mj-outlook-group-fix" style=3Dfont-size:0px;t=
+ext-align:left;direction:ltr;display:inline-block;vertical-align:top;width:=
+100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentatio=
+n style=3Dborder-radius:0px;vertical-align:top; width=3D100%> <tr> <td vali=
+gn=3Dmiddle class=3D"hide-on-mobile button-container" style=3D"display: non=
+e; font-size: 0px; padding: 0px 8px 0px 0px; word-break: break-word; text-a=
+lign: right;" align=3Dright> <div> <!--[if mso]> <table width=3D"100%" alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bord=
+er-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace=
+:0pt;"> <tr> <td align=3D"right" class=3D"mso-button-dark-mode"> <a:roundre=
+ct xmlns:a=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microso=
+ft-com:office:word" href=3D"https://c.gle/AKMee0eulMIRJLdMdaRDnNZzktREA0Rie=
+BDlSYt1aES4jRLQS3oM_R2C-2YDqYQKN5_x7vqwlBVJCY8uqPaji8PJQBtodLYR9Oy7xVrKzMxe=
+YuRQfbFFrYSqQYO-qmVTVHW6zIDDLHcjGo6m31F-p8TXROzW_suxaCQfqiTcV1fLFAarIodToVw=
+" fillcolor=3D"none" arcsize=3D"24%" style=3D"v-text-anchor:middle;width:10=
+3.5pt;height:38.25pt;" strokecolor=3D"#5F6368" strokeweight=3D"0.75pt" > <w=
+:anchorlock/> <a:textbox inset=3D"0,0,0,0"> <center style=3D"color:#ffffff;=
+ font-family:sans-serif, Arial; font-size:16px"> <![endif]--> <a href=3Dhtt=
+ps://c.gle/AKMee0eulMIRJLdMdaRDnNZzktREA0RieBDlSYt1aES4jRLQS3oM_R2C-2YDqYQK=
+N5_x7vqwlBVJCY8uqPaji8PJQBtodLYR9Oy7xVrKzMxeYuRQfbFFrYSqQYO-qmVTVHW6zIDDLHc=
+jGo6m31F-p8TXROzW_suxaCQfqiTcV1fLFAarIodToVw style=3D"display: inline-block=
+; width: auto; background: transparent; color: #8AB4F8; font-family: 'Googl=
+e Sans Text-Medium', Arial, sans-serif; font-size: 14px; font-weight: 500; =
+letter-spacing: 0.2px; line-height: 1.5; margin: 0; text-align: center; tex=
+t-decoration: none; text-transform: none; padding: 14px 20px 14px 20px; mso=
+-padding-alt: 0px; border-radius: 12px; border-left: 1px solid #5F6368; bor=
+der-right: 1px solid #5F6368; border-top: 1px solid #5F6368; border-bottom:=
+ 1px solid #5F6368; mso-border-alt: none; box-sizing: border-box;" target=
+=3D_blank width=3D139>Read the docs</a> <!--[if mso]> </center> </a:textbox=
+> </a:roundrect> </td> </tr> </table> <![endif]--> </div> </td> </tr> </tab=
+le> </div> <!--[if mso | IE]> </td> <td style=3D"vertical-align:top;width:2=
+92px;" > <![endif]--> <div class=3D"mj-column-per-50 mj-outlook-group-fix" =
+style=3Dfont-size:0px;text-align:left;direction:ltr;display:inline-block;ve=
+rtical-align:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=
+=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical-align:top; widt=
+h=3D100%> <tr> <td valign=3Dmiddle class=3D"text-align-left padding-0px-0px=
+-0px-8px button-container" style=3D"font-size:0px;padding:0px 0px 0px 0px;w=
+ord-break:break-word;mso-padding-alt:0px 0px 0px 8px;text-align:center;"> <=
+div> <!--[if mso]> <table width=3D"100%" align=3D"center" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" style=3D"border-spacing:0;border-collapse:c=
+ollapse;mso-table-lspace:0pt;mso-table-rspace:0pt;"> <tr> <td align=3D"left=
+" class=3D"mso-button-dark-mode"> <a:roundrect xmlns:a=3D"urn:schemas-micro=
+soft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"htt=
+ps://c.gle/AKMee0ccdjYiuLYbu_tFy8ZKlUc2-Oldt8Mk2HnYdHyY4Wn1VSj9pawioBonFYqF=
+0HhcMVd-o64V38HjnRYOGBOsdG_CVNVHjmx2axZMid39DAby5BJBHd3TMUC1bTl4r0Q9iMwTjta=
+uPllMpADbvF49K6mU_67cvhl9pJn0EWNPKmwwWB4SKXc6KbFK-9y1cLBp3UyllLCpj_8" fillc=
+olor=3D"#8AB4F8" arcsize=3D"24%" style=3D"v-text-anchor:middle;width:106.5p=
+t;height:36.75pt;" stroke=3D"f" > <w:anchorlock/> <a:textbox inset=3D"0,0,0=
+,0"> <center style=3D"color:#ffffff; font-family:sans-serif, Arial; font-si=
+ze:16px"> <![endif]--> <a href=3Dhttps://c.gle/AKMee0ccdjYiuLYbu_tFy8ZKlUc2=
+-Oldt8Mk2HnYdHyY4Wn1VSj9pawioBonFYqF0HhcMVd-o64V38HjnRYOGBOsdG_CVNVHjmx2axZ=
+Mid39DAby5BJBHd3TMUC1bTl4r0Q9iMwTjtauPllMpADbvF49K6mU_67cvhl9pJn0EWNPKmwwWB=
+4SKXc6KbFK-9y1cLBp3UyllLCpj_8 style=3D"display: inline-block; width: auto; =
+background: #8AB4F8; color: #1A1A1A; font-family: 'Google Sans Text-Medium'=
+, Arial, sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 0.2=
+px; line-height: 1.5; margin: 0; text-align: center; text-decoration: none;=
+ text-transform: none; padding: 14px 20px 14px 20px; mso-padding-alt: 0px; =
+border-radius: 12px; mso-border-alt: none; box-sizing: border-box;" target=
+=3D_blank width=3D142>Try in AI Studio</a> <!--[if mso]> </center> </a:text=
+box> </a:roundrect> </td> </tr> </table> <![endif]--> </div> </td> </tr> </=
+table> </div> <!--[if mso | IE]> </td> </tr> </table> </td> </tr> </table> =
+<![endif]--> </div> </td> </tr> </table> </td> </tr> </table> </td> </tr> <=
+/table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td> <=
+/tr> </table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> <=
+/div> </td> </tr> </table> <table align=3Dcenter border=3D0 cellpadding=3D0=
+ cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection> <=
+tr> <td align=3Dcenter> <div role=3Dpresentation> <!--[if mso | IE]> <table=
+ align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D=
+"block-grid-outlook" style=3D"width:640px;" width=3D"640" > <tr> <td style=
+=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"> <![endif]=
+--> <div style=3D"margin:0 auto;max-width:640px;"> <table align=3Dcenter bo=
+rder=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:=
+100%;> <tr> <td style=3Dfont-size:0px;padding:0px;text-align:center;vertica=
+l-align:top; class=3Dblock-grid> <!--[if mso | IE]> <table role=3D"presenta=
+tion" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"v=
+ertical-align:top;width:640px;" > <![endif]--> <div class=3D"mj-column-per-=
+100 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direction:l=
+tr;display:inline-block;vertical-align:top;width:100%;> <table border=3D0 c=
+ellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0p=
+x;vertical-align:top; width=3D100%> <tr> <td style=3Dfont-size:0px;word-bre=
+ak:break-word;> <div style=3Dline-height:40px;height:40px;mso-line-height-a=
+lt:40px;> &nbsp;</div> </td> </tr> </table> </div> <!--[if mso | IE]> </td>=
+ </tr> </table> <![endif]--> </td> </tr> </table> </div> <!--[if mso | IE]>=
+ </td> </tr> </table> <![endif]--> </div> </td> </tr> </table> <table align=
+=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation st=
+yle=3Dwidth:100%; class=3Dsection> <tr> <td align=3Dcenter> <div role=3Dpre=
+sentation> <!--[if mso | IE]> <table align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:640=
+px;" width=3D"640" > <tr> <td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;"> <![endif]--> <div style=3D"margin:0 auto;max-widt=
+h:640px;"> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0=
+ role=3Dpresentation style=3Dwidth:100%;> <tr> <td style=3D"font-size:0px;p=
+adding:0px;text-align:center;vertical-align:top;mso-padding-alt:0px 35px 0p=
+x 35px;" class=3D"block-grid padding-0px-35px-0px-35px"> <!--[if mso | IE]>=
+ <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0"> <tr> <td style=3D"vertical-align:top;width:570px;" > <![endif]--> <div=
+ class=3D"mj-column-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;tex=
+t-align:left;direction:ltr;display:inline-block;vertical-align:top;width:10=
+0%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation =
+style=3Dbackground-color:#262626;border-radius:0px;vertical-align:top; widt=
+h=3D100%> <tr> <td style=3D"font-size:0px;padding:0px 0px 0px 0px;word-brea=
+k:break-word;text-align:center;"> <table width=3D100% role=3Dpresentation b=
+order=3D0 cellpadding=3D0 cellspacing=3D0 style=3D"border-top:solid 1px tra=
+nsparent;font-size:0;display:inline-block;line-height:0;"> <tr> <td height=
+=3D0 style=3Dheight:0;line-height:0;>&nbsp; </td> </tr> </table> </td> </tr=
+> </table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td=
+> </tr> </table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--=
+> </div> </td> </tr> </table> <table align=3Dcenter border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsectio=
+n> <tr> <td align=3Dcenter> <div role=3Dpresentation> <!--[if mso | IE]> <t=
+able align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"block-grid-outlook" style=3D"width:640px;" width=3D"640" > <tr> <td st=
+yle=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"> <![end=
+if]--> <div style=3D"margin:0 auto;max-width:640px;"> <table align=3Dcenter=
+ border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwid=
+th:100%;> <tr> <td style=3Dfont-size:0px;padding:0px;text-align:center;vert=
+ical-align:top; class=3Dblock-grid> <!--[if mso | IE]> <table role=3D"prese=
+ntation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=
+=3D"vertical-align:top;width:640px;" > <![endif]--> <div class=3D"mj-column=
+-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direct=
+ion:ltr;display:inline-block;vertical-align:top;width:100%;> <table border=
+=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-rad=
+ius:0px;vertical-align:top; width=3D100%> <tr> <td style=3Dfont-size:0px;wo=
+rd-break:break-word;> <div style=3Dline-height:36px;height:36px;mso-line-he=
+ight-alt:48px; class=3D"height-48px line-height-48px">&nbsp; </div> </td> <=
+/tr> </table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> <=
+/td> </tr> </table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif=
+]--> </div> </td> </tr> </table> <table align=3Dcenter border=3D0 cellpaddi=
+ng=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsect=
+ion> <tr> <td align=3Dcenter> <div role=3Dpresentation> <!--[if mso | IE]> =
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"block-grid-outlook" style=3D"width:640px;" width=3D"640" > <tr> <td =
+style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"> <![e=
+ndif]--> <div style=3D"margin:0 auto;max-width:640px;"> <table align=3Dcent=
+er border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dw=
+idth:100%;> <tr> <td style=3D"font-size:0px;padding:0px 30px 0px 30px;text-=
+align:center;vertical-align:top;mso-padding-alt:0px 28px 0px 28px;" class=
+=3D"block-grid padding-0px-28px-0px-28px"> <!--[if mso | IE]> <table role=
+=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <t=
+d style=3D"vertical-align:top;width:584px;" > <![endif]--> <div class=3D"mj=
+-column-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left=
+;direction:ltr;display:inline-block;vertical-align:top;width:100%;> <table =
+border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbord=
+er-radius:0px;vertical-align:top; width=3D100%> <tr> <td class=3Dtext-conta=
+iner style=3D"font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;t=
+ext-align:left;"> <div class=3Dlinks-1A73E8-underline> <div style=3D"font-f=
+amily:'Google Sans', 'Roboto', Arial, sans-serif;font-size:16px;font-weight=
+:400;letter-spacing:0px;line-height:1.5;text-align:left;mso-line-height-alt=
+:1.5em;color:#F8FAFD;"> <p style=3D"margin: 0;">Hi Harsh,</p> </div> </div>=
+ </td> </tr> <tr> <td style=3Dfont-size:0px;word-break:break-word;> <div st=
+yle=3Dline-height:16px;height:16px;mso-line-height-alt:16px;> &nbsp;</div> =
+</td> </tr> <tr> <td class=3Dtext-container style=3D"font-size:0px;padding:=
+0px 0px 0px 0px;word-break:break-word;mso-padding-alt:0px 0px 0px 0px;text-=
+align:left;"> <div class=3Dlinks-8AB4F8-underline> <div style=3D"font-famil=
+y:'Google Sans Text', Roboto, sans-serif;font-size:16px;font-weight:normal;=
+letter-spacing:0px;line-height:1.5;text-align:left;mso-line-height-alt:1.5e=
+m;color:#E8EAED;"> <p style=3D"margin: 0;">We are excited to share that Gem=
+ini 3.6 Flash (<span class=3Dgeist-font style=3D"font-family:monospace;colo=
+r: #5bb974;">gemini-3.6-flash</span>) and Gemini 3.5 Flash-Lite (<span clas=
+s=3Dgeist-font style=3D"font-family:monospace;color: #5bb974;">gemini-3.5-f=
+lash-lite</span>) are now generally available in the Gemini API and ready f=
+or your production environments.&nbsp;</p> </div> </div> </td> </tr> </tabl=
+e> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr> =
+</table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div>=
+ </td> </tr> </table> <table align=3Dcenter border=3D0 cellpadding=3D0 cell=
+spacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection> <tr> <=
+td align=3Dcenter> <div role=3Dpresentation> <!--[if mso | IE]> <table alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"bloc=
+k-grid-outlook" style=3D"width:640px;" width=3D"640" > <tr> <td style=3D"li=
+ne-height:0px;font-size:0px;mso-line-height-rule:exactly;"> <![endif]--> <d=
+iv style=3D"margin:0 auto;max-width:640px;"> <table align=3Dcenter border=
+=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%=
+;> <tr> <td style=3Dfont-size:0px;padding:0px;text-align:center;vertical-al=
+ign:top; class=3Dblock-grid> <!--[if mso | IE]> <table role=3D"presentation=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"verti=
+cal-align:top;width:640px;" > <![endif]--> <div class=3D"mj-column-per-100 =
+mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direction:ltr;d=
+isplay:inline-block;vertical-align:top;width:100%;> <table border=3D0 cellp=
+adding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;ve=
+rtical-align:top; width=3D100%> <tr> <td style=3Dfont-size:0px;word-break:b=
+reak-word;> <div style=3Dline-height:32px;height:32px;mso-line-height-alt:3=
+2px;> &nbsp;</div> </td> </tr> </table> </div> <!--[if mso | IE]> </td> </t=
+r> </table> <![endif]--> </td> </tr> </table> </div> <!--[if mso | IE]> </t=
+d> </tr> </table> <![endif]--> </div> </td> </tr> </table> <table align=3Dc=
+enter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=
+=3Dwidth:100%; class=3Dsection> <tr> <td align=3Dcenter> <div role=3Dpresen=
+tation> <!--[if mso | IE]> <table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:640px;=
+" width=3D"640" > <tr> <td style=3D"line-height:0px;font-size:0px;mso-line-=
+height-rule:exactly;"> <![endif]--> <div style=3D"background:transparent;ba=
+ckground-color:transparent;margin:0 auto;max-width:640px;"> <table align=3D=
+center border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=
+=3Dbackground-color:transparent;width:100%;> <tr> <td style=3D"font-size:0p=
+x;padding:0px 30px 0px 30px;text-align:center;vertical-align:top;mso-paddin=
+g-alt:0px 28px 0px 28px;" class=3D"block-grid padding-0px-28px-0px-28px"> <=
+!--[if mso | IE]> <table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"> <tr> <td style=3D"vertical-align:top;width:584px;" > =
+<![endif]--> <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D=
+font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-a=
+lign:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 rol=
+e=3Dpresentation width=3D100%> <tr> <td style=3D"background-color:#202124;b=
+order-bottom:1px solid transparent;border-left:1px solid transparent;border=
+-radius:32px;border-right:1px solid transparent;border-top:1px solid transp=
+arent;vertical-align:top;padding:0px 20px 0px 20px;mso-padding-alt:0px 30px=
+ 0px 30px;" class=3Dpadding-0px-30px-0px-30px> <table border=3D0 cellpaddin=
+g=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td style=3Dfo=
+nt-size:0px;word-break:break-word;> <div style=3Dline-height:20px;height:20=
+px;mso-line-height-alt:30px; class=3D"height-30px line-height-30px"> &nbsp;=
+</div> </td> </tr> <tr> <td> <table align=3Dcenter border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsectio=
+n> <tr> <td align=3Dcenter style=3Dfont-size:0px;text-align:center;vertical=
+-align:top;padding:0px;word-break:break-word;> <!--[if mso | IE]> <table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td> =
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"> <tr> <td style=3D"vertical-align:top;width:522px;" > <![endif]--> <div =
+class=3D"mj-column-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text=
+-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100=
+%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation s=
+tyle=3Dborder-radius:0px;vertical-align:top; width=3D100%> <tr> <td> <table=
+ align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentat=
+ion style=3Dbackground-color:transparent;width:100%;border-radius:12px; cla=
+ss=3Dsection> <tr> <td align=3Dcenter style=3D"border-bottom:1px none #8086=
+8B;border-left:1px none #80868B;border-right:1px none #80868B;border-top:1p=
+x none #80868B;border-radius:12px;font-size:0px;text-align:center;vertical-=
+align:top;padding:0px;word-break:break-word;"> <div role=3Dpresentation> <!=
+--[if mso | IE]> <table align=3D"center" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0"> <tr> <td> <![endif]--> <table align=3Dcenter border=3D0 cel=
+lpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td sty=
+le=3D"line-height:0;font-size:0;direction:ltr;border-bottom:8px solid trans=
+parent;border-left:8px solid transparent;border-right:8px solid transparent=
+;border-top:8px solid transparent;"> <!--[if mso | IE]> <table role=3D"pres=
+entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=
+=3D"vertical-align:top;width:50.4px;" > <![endif]--> <div class=3D"mj-colum=
+n-per-10 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direct=
+ion:ltr;display:inline-block;vertical-align:top;width:100%;> <table border=
+=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr>=
+ <td style=3D"border-radius:0px;vertical-align:top;padding:0px 0px 10px 0px=
+;mso-padding-alt:0px 0px 0px 0px;" class=3Dpadding-0px-0px-0px-0px> <table =
+border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%=
+> <tr> <td class=3Dimg-container style=3Dfont-size:0px;padding:0px;word-bre=
+ak:break-word;text-align:center;> <div style=3D"margin:0 auto;max-width:50p=
+x;" class=3Dimg-full-width> <img alt height=3Dauto width=3D50 src=3Dhttps:/=
+/gstatic.com/growthlab/api/Jy7Mt3jW5pUNYYD1VTbbH7zn44VUuVkOvfZCFLNL.png sty=
+le=3Dborder:none;outline:none;text-decoration:none;height:auto;width:100%;f=
+ont-size:13px;display:block;> </div> </td> </tr> </table> </td> </tr> </tab=
+le> </div> <!--[if mso | IE]> </td> <td style=3D"vertical-align:top;width:4=
+53.6px;" > <![endif]--> <div class=3D"mj-column-per-90 mj-outlook-group-fix=
+" style=3Dfont-size:0px;text-align:left;direction:ltr;display:inline-block;=
+vertical-align:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspaci=
+ng=3D0 role=3Dpresentation width=3D100%> <tr> <td style=3D"border-radius:0p=
+x;vertical-align:top;padding:0px 0px 0px 0px;mso-padding-alt:0px 0px 0px 16=
+px;" class=3Dpadding-0px-0px-0px-16px> <table border=3D0 cellpadding=3D0 ce=
+llspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td class=3Dtext-conta=
+iner style=3D"font-size:0px;padding:0px 0px 4px 0px;word-break:break-word;t=
+ext-align:center;"> <div class=3Dlinks-8AB4F8> <div style=3D"font-family:'G=
+oogle Sans', 'Roboto', Arial, sans-serif;font-weight:normal;letter-spacing:=
+none;text-align:center;color:#F8FAFD;" class=3D"mso-text-align-left text-al=
+ign-left"> <h3 style=3D"margin: 0; font-size: 16px; font-weight: 500; line-=
+height: 1.5; mso-line-height-alt: 1.5em"> Gemini 3.6 Flash&nbsp; </h3> </di=
+v> </div> </td> </tr> <tr> <td class=3Dtext-container style=3D"font-size:0p=
+x;padding:0px 0px 0px 0px;word-break:break-word;mso-padding-alt:0px 0px 0px=
+ 0px;text-align:center;"> <div class=3Dlinks-4285F4> <div style=3D"font-fam=
+ily:'Google Sans Text', Roboto, sans-serif;font-size:14px;font-weight:400;l=
+etter-spacing:none;line-height:1.5;text-align:center;mso-line-height-alt:1.=
+313em;color:#E8EAED;" class=3D"mso-text-align-left text-align-left"> <p sty=
+le=3D"margin: 0;"> 17% more token-efficient with better quality and lower c=
+ost than Gemini 3.5 Flash. Optimized for multi-step orchestration, full-sta=
+ck code generation, and general reasoning. </p> <p style=3D"margin: 0;">&nb=
+sp;</p> <p style=3D"margin: 0;"><a href=3Dhttps://c.gle/AKMee0cZHDZfEPTYVfp=
+oy9FspZ1po1LPyNCxN3DmD0IJACM1QUk3xnBO-NzKwX1sveR7XJHY-2-X5Cy72kyaScEkg2D8QH=
+ME4oVL9OQmXBB9N81sdvA7zg8JBEXaF9hwT5_QaE-wzO-aZtHqBH3MZAxNRgts728hW8woghLMF=
+0HhMgyBa9j5j4caX1zrrnBYQmlQ0w target=3D_blank rel=3Dnoopener style=3D"color=
+: rgb(138, 180, 248); text-decoration: underline;">Reduced pricing</a>:&nbs=
+p;Lower output token costs ($7.50/1M vs. $9.00/1M for 3.5 Flash), maintaini=
+ng input tokens at $1.50/1M.</p> </div> </div> </td> </tr> </table> </td> <=
+/tr> </table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> <=
+/td> </tr> </table> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </=
+div> </td> </tr> </table> </td> </tr> <tr> <td style=3Dfont-size:0px;word-b=
+reak:break-word;> <div style=3Dline-height:16px;height:16px;mso-line-height=
+-alt:16px;> &nbsp; </div> </td> </tr> </table> </div> <!--[if mso | IE]> </=
+td> </tr> </table> </td> </tr> </table> <![endif]--> </td> </tr> </table> <=
+/td> </tr> <tr> <td> <table align=3Dcenter border=3D0 cellpadding=3D0 cells=
+pacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection> <tr> <t=
+d align=3Dcenter style=3Dfont-size:0px;text-align:center;vertical-align:top=
+;padding:0px;word-break:break-word;> <!--[if mso | IE]> <table align=3D"cen=
+ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td> <table rol=
+e=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <=
+td style=3D"vertical-align:top;width:522px;" > <![endif]--> <div class=3D"m=
+j-column-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:lef=
+t;direction:ltr;display:inline-block;vertical-align:top;width:100%;> <table=
+ border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbor=
+der-radius:0px;vertical-align:top; width=3D100%> <tr> <td> <table align=3Dc=
+enter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=
+=3Dbackground-color:transparent;width:100%;border-radius:12px; class=3Dsect=
+ion> <tr> <td align=3Dcenter style=3D"border-bottom:1px none #80868B;border=
+-left:1px none #80868B;border-right:1px none #80868B;border-top:1px none #8=
+0868B;border-radius:12px;font-size:0px;text-align:center;vertical-align:top=
+;padding:0px;word-break:break-word;"> <div role=3Dpresentation> <!--[if mso=
+ | IE]> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0"> <tr> <td> <![endif]--> <table align=3Dcenter border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td style=3D"li=
+ne-height:0;font-size:0;direction:ltr;border-bottom:8px solid transparent;b=
+order-left:8px solid transparent;border-right:8px solid transparent;border-=
+top:8px solid transparent;"> <!--[if mso | IE]> <table role=3D"presentation=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"verti=
+cal-align:top;width:50.4px;" > <![endif]--> <div class=3D"mj-column-per-10 =
+mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direction:ltr;d=
+isplay:inline-block;vertical-align:top;width:100%;> <table border=3D0 cellp=
+adding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td style=
+=3D"border-radius:0px;vertical-align:top;padding:0px 0px 10px 0px;mso-paddi=
+ng-alt:0px 0px 0px 0px;" class=3Dpadding-0px-0px-0px-0px> <table border=3D0=
+ cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td=
+ class=3Dimg-container style=3Dfont-size:0px;padding:0px;word-break:break-w=
+ord;text-align:center;> <div style=3D"margin:0 auto;max-width:50px;" class=
+=3Dimg-full-width> <img alt height=3Dauto width=3D50 src=3Dhttps://gstatic.=
+com/growthlab/api/Jy7Mt3jW5pUNYYD1VTbbH7zn44VUuVkOvfZCFLNL.png style=3Dbord=
+er:none;outline:none;text-decoration:none;height:auto;width:100%;font-size:=
+13px;display:block;> </div> </td> </tr> </table> </td> </tr> </table> </div=
+> <!--[if mso | IE]> </td> <td style=3D"vertical-align:top;width:453.6px;" =
+> <![endif]--> <div class=3D"mj-column-per-90 mj-outlook-group-fix" style=
+=3Dfont-size:0px;text-align:left;direction:ltr;display:inline-block;vertica=
+l-align:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 =
+role=3Dpresentation width=3D100%> <tr> <td style=3D"border-radius:0px;verti=
+cal-align:top;padding:0px 0px 0px 0px;mso-padding-alt:0px 0px 0px 16px;" cl=
+ass=3Dpadding-0px-0px-0px-16px> <table border=3D0 cellpadding=3D0 cellspaci=
+ng=3D0 role=3Dpresentation width=3D100%> <tr> <td class=3Dtext-container st=
+yle=3D"font-size:0px;padding:0px 0px 4px 0px;word-break:break-word;text-ali=
+gn:center;"> <div class=3Dlinks-8AB4F8> <div style=3D"font-family:'Google S=
+ans', 'Roboto', Arial, sans-serif;font-weight:normal;letter-spacing:none;te=
+xt-align:center;color:#F8FAFD;" class=3D"mso-text-align-left text-align-lef=
+t"> <h3 style=3D"margin: 0; font-size: 16px; font-weight: 500; line-height:=
+ 1.50; mso-line-height-alt: 1.5em"> Gemini 3.5 Flash-Lite&nbsp; </h3> </div=
+> </div> </td> </tr> <tr> <td class=3Dtext-container style=3D"font-size:0px=
+;padding:0px 0px 0px 0px;word-break:break-word;mso-padding-alt:0px 0px 0px =
+0px;text-align:center;"> <div class=3Dlinks-4285F4> <div style=3D"font-fami=
+ly:'Google Sans Text', Roboto, sans-serif;font-size:14px;font-weight:400;le=
+tter-spacing:none;line-height:1.5;text-align:center;mso-line-height-alt:1.3=
+13em;color:#E8EAED;" class=3D"mso-text-align-left text-align-left"> <p styl=
+e=3D"margin: 0;"> Our fastest and most cost-efficient 3.5 model, designed t=
+o scale agentic workflows that demand super fast inference. </p> </div> </d=
+iv> </td> </tr> </table> </td> </tr> </table> </div> <!--[if mso | IE]> </t=
+d> </tr> </table> <![endif]--> </td> </tr> </table> <!--[if mso | IE]> </td=
+> </tr> </table> <![endif]--> </div> </td> </tr> </table> </td> </tr> </tab=
+le> </div> <!--[if mso | IE]> </td> </tr> </table> </td> </tr> </table> <![=
+endif]--> </td> </tr> </table> </td> </tr> <tr> <td style=3Dfont-size:0px;w=
+ord-break:break-word;> <div style=3Dline-height:24px;height:24px;mso-line-h=
+eight-alt:24px;> &nbsp;</div> </td> </tr> <tr> <td valign=3Dmiddle class=3D=
+button-container style=3D"font-size:0px;padding:0px 0px 0px 0px;word-break:=
+break-word;mso-padding-alt:0px 0px 0px 0px;text-align:center;"> <div> <!--[=
+if mso]> <table width=3D"100%" align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"border-spacing:0;border-collapse:collapse;ms=
+o-table-lspace:0pt;mso-table-rspace:0pt;"> <tr> <td align=3D"center" class=
+=3D"mso-button-dark-mode"> <a:roundrect xmlns:a=3D"urn:schemas-microsoft-co=
+m:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https://c.=
+gle/AKMee0fPv5UDq7V8sKWHMVrHXPft5sY1pQYfqFezq1Z7FvgwRDCuDuLDROHGoPqXEUq1EFM=
+zI3_pZARvT0E_mtmF34F596VKD-nApN17fFHsKq_PQWtDyx6GQZQok-GMjqTcwH7k-IwXy_UuXJ=
+GLTCToZYavyNpfzBOvVfgj8UNE3nW8HrA5-RwQzLrA3RIP_Nmk_g" fillcolor=3D"none" ar=
+csize=3D"24%" style=3D"v-text-anchor:middle;width:194.25pt;height:38.25pt;"=
+ strokecolor=3D"#5F6368" strokeweight=3D"0.75pt" > <w:anchorlock/> <a:textb=
+ox inset=3D"0,0,0,0"> <center style=3D"color:#ffffff; font-family:sans-seri=
+f, Arial; font-size:16px"> <![endif]--> <a href=3Dhttps://c.gle/AKMee0fPv5U=
+Dq7V8sKWHMVrHXPft5sY1pQYfqFezq1Z7FvgwRDCuDuLDROHGoPqXEUq1EFMzI3_pZARvT0E_mt=
+mF34F596VKD-nApN17fFHsKq_PQWtDyx6GQZQok-GMjqTcwH7k-IwXy_UuXJGLTCToZYavyNpfz=
+BOvVfgj8UNE3nW8HrA5-RwQzLrA3RIP_Nmk_g style=3D"display: inline-block; width=
+: auto; background: transparent; color: #8AB4F8; font-family: 'Google Sans =
+Text-Medium', Arial, sans-serif; font-size: 14px; font-weight: 500; letter-=
+spacing: 0.2px; line-height: 21px; margin: 0; text-align: center; text-deco=
+ration: none; text-transform: none; padding: 14px 20px 14px 20px; mso-paddi=
+ng-alt: 0px; border-radius: 12px; border-left: 1px solid #5F6368; border-ri=
+ght: 1px solid #5F6368; border-top: 1px solid #5F6368; border-bottom: 1px s=
+olid #5F6368; mso-border-alt: none; box-sizing: border-box;" target=3D_blan=
+k width=3D260>Get full 'What's New' breakdown</a> <!--[if mso]> </center> <=
+/a:textbox> </a:roundrect> </td> </tr> </table> <![endif]--> </div> </td> <=
+/tr> <tr> <td style=3Dfont-size:0px;word-break:break-word;> <div style=3Dli=
+ne-height:30px;height:30px;mso-line-height-alt:30px;> &nbsp;</div> </td> </=
+tr> </table> </td> </tr> </table> </div> <!--[if mso | IE]> </td> </tr> </t=
+able> <![endif]--> </td> </tr> </table> </div> <!--[if mso | IE]> </td> </t=
+r> </table> <![endif]--> </div> </td> </tr> </table> <table align=3Dcenter =
+border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidt=
+h:100%; class=3Dsection> <tr> <td align=3Dcenter> <div role=3Dnone> <!--[if=
+ mso | IE]> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"block-grid-outlook" style=3D"width:640px;" width=3D"640"=
+ > <tr> <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exa=
+ctly;"> <![endif]--> <div style=3D"margin:0 auto;max-width:640px;"> <table =
+align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentati=
+on style=3Dwidth:100%;> <tr> <td style=3Dfont-size:0px;padding:0px;text-ali=
+gn:center;vertical-align:top; class=3Dblock-grid> <!--[if mso | IE]> <table=
+ role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <t=
+r> <td style=3D"vertical-align:top;width:640px;" > <![endif]--> <div class=
+=3D"mj-column-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text-alig=
+n:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;> <=
+table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=
+=3Dborder-radius:0px;vertical-align:top; width=3D100%> <tr> <td style=3Dfon=
+t-size:0px;word-break:break-word;> <div style=3Dline-height:40px;height:40p=
+x;mso-line-height-alt:40px;> &nbsp;</div> </td> </tr> </table> </div> <!--[=
+if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr> </table> </div>=
+ <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div> </td> </tr> </=
+table> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 rol=
+e=3Dpresentation style=3Dbackground-color:transparent;width:100%; class=3Ds=
+ection> <tr> <td align=3Dcenter> <div role=3Dnone> <!--[if mso | IE]> <tabl=
+e align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"block-grid-outlook" style=3D"width:640px;" width=3D"640" > <tr> <td sty=
+le=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"> <![endi=
+f]--> <div style=3D"margin:0 auto;max-width:640px;"> <table align=3Dcenter =
+border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidt=
+h:100%;> <tr> <td style=3Dfont-size:0px;padding:0px;text-align:center;verti=
+cal-align:top; class=3Dblock-grid> <!--[if mso | IE]> <table role=3D"presen=
+tation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D=
+"vertical-align:middle;width:640px;" > <![endif]--> <div class=3D"mj-column=
+-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direct=
+ion:ltr;display:inline-block;vertical-align:middle;width:100%;> <table bord=
+er=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <t=
+r> <td style=3D"border-radius:0px;vertical-align:middle;padding:0px 16px 4p=
+x 16px;mso-padding-alt:0px 28px 0px 28px;" class=3Dpadding-0px-28px-0px-28p=
+x> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation wi=
+dth=3D100%> <tr> <td style=3Dfont-size:0px;word-break:break-word;> <div sty=
+le=3Dline-height:20px;height:20px;mso-line-height-alt:20px;> &nbsp;</div> <=
+/td> </tr> <tr> <td> <table align=3Dcenter border=3D0 cellpadding=3D0 cells=
+pacing=3D0 role=3Dpresentation style=3Dbackground-color:#202124;width:100%;=
+border-radius:12px; class=3Dsection> <tr> <td align=3Dcenter style=3D"borde=
+r-bottom:1px solid transparent;border-left:1px solid transparent;border-rig=
+ht:1px solid transparent;border-top:1px solid transparent;border-radius:12p=
+x;font-size:0px;text-align:center;vertical-align:top;padding:0px 0px 0px 0p=
+x;word-break:break-word;mso-padding-alt:0px;" class=3Dpadding-0px> <div rol=
+e=3Dnone> <!--[if mso | IE]> <table align=3D"center" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0"> <tr> <td> <![endif]--> <table align=3Dcenter bo=
+rder=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> =
+<tr> <td style=3Dline-height:0;font-size:0;direction:ltr;> <!--[if mso | IE=
+]> <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0"> <tr> <td style=3D"vertical-align:middle;width:174.6px;" > <![endif]=
+--> <div class=3D"mj-column-per-30 mj-outlook-group-fix" style=3Dfont-size:=
+0px;text-align:left;direction:ltr;display:inline-block;vertical-align:middl=
+e;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpre=
+sentation width=3D100%> <tr> <td style=3D"border-radius:0px;vertical-align:=
+middle;padding:12px 18px 8px 16px;mso-padding-alt:16px 20px 16px 30px;" cla=
+ss=3D"vertical-align-middle padding-16px-20px-16px-30px"> <table border=3D0=
+ cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td=
+ class=3Dimg-container style=3Dfont-size:0px;padding:0px;word-break:break-w=
+ord;text-align:center;> <div style=3D"margin:0 auto;max-width:82px;" class=
+=3Dimg-full-width> <a href=3Dhttps://c.gle/AKMee0cECoyHe5C6_qiwcOeb1krXrNwO=
+3O-l7s0UscqJdSYkS_jzkADcHO5LcaLtOH3TQjjNTd1yHKU1PbbUwlS2E40y3aAls0d33iNHdjf=
+IsF_rNx0lF6HpIjlQ82sFOaLFN2XGxWyAJ4mI8j0EpcXWLEiIRCMvLQy1TuaN4C1gA4ZsSSpd0j=
+bGPJ0 target=3D_blank style=3D"text-decoration: none; color: #1A73E8;"> <im=
+g alt=3D"Abstract dark interface graphic with glowing tiles featuring lock,=
+ search, settings, document, and cursor icons." height=3Dauto width=3D124 s=
+rc=3Dhttps://gstatic.com/growthlab/api/ThvfPhjzyLmhvYUqLAy3GQJ8L69Q44hNUZzT=
+VlPR.png style=3Dborder:none;border-radius:24px;outline:none;text-decoratio=
+n:none;height:auto;width:100%;font-size:13px;display:block;> </a> </div> </=
+td> </tr> </table> </td> </tr> </table> </div> <!--[if mso | IE]> </td> <td=
+ style=3D"vertical-align:middle;width:407.4px;" > <![endif]--> <div class=
+=3D"mj-column-per-70 mj-outlook-group-fix" style=3Dfont-size:0px;text-align=
+:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;>=
+ <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation widt=
+h=3D100%> <tr> <td style=3D"border-radius:0px;vertical-align:middle;padding=
+:0px 0px 8px 0px;mso-padding-alt:24px 20px 12px 0px;" class=3D"vertical-ali=
+gn-middle padding-24px-20px-12px-0px"> <table border=3D0 cellpadding=3D0 ce=
+llspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td class=3Dtext-conta=
+iner style=3D"font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;m=
+so-padding-alt:0px 0px 0px 0px;text-align:center;"> <div class=3Dlinks-4285=
+F4> <div style=3D"font-family:'Google Sans', 'Roboto', Arial, sans-serif;fo=
+nt-weight:normal;letter-spacing:none;text-align:center;color:#F8FAFD;" clas=
+s=3D"mso-text-align-left text-align-left"> <h4 style=3D"margin: 0; font-siz=
+e: 20px; font-weight: 400; line-height: 30.00px; mso-line-height-alt: 1.5em=
+"> Compare models in the demo app </h4> </div> </div> </td> </tr> <tr> <td =
+class=3Dtext-container style=3D"font-size:0px;padding:8px 0px 0px 0px;word-=
+break:break-word;text-align:center;"> <div class=3Dlinks-4285F4> <div style=
+=3D"font-family:'Google Sans Text', Roboto, sans-serif;font-weight:normal;l=
+etter-spacing:none;text-align:center;color:#F8FAFD;" class=3D"mso-text-alig=
+n-left text-align-left"> <h4 style=3D"margin: 0; font-size: 14px; font-weig=
+ht: 400; line-height: 21.00px; mso-line-height-alt: 1.25em"> Built with Gem=
+ini managed agents and the latest Flash models in Google AI Studio. </h4> <=
+/div> </div> </td> </tr> <tr> <td valign=3Dmiddle class=3D"text-align-left =
+button-container" style=3D"font-size:0px;padding:0px 0px 0px 0px;word-break=
+:break-word;mso-padding-alt:0px 0px 0px 0px;text-align:center;"> <div> <!--=
+[if mso]> <table width=3D"100%" align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-spacing:0;border-collapse:collapse=
+;mso-table-lspace:0pt;mso-table-rspace:0pt;"> <tr> <td align=3D"left" class=
+=3D"mso-button-dark-mode"> <a:roundrect xmlns:a=3D"urn:schemas-microsoft-co=
+m:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"https://c.=
+gle/AKMee0e2x0reDC0D966MW2311-bXvd_j9yKhcC0n_nbwxo91oJaMbxEHBMvkh2XCdn3XoPh=
+clbsqVkYh8mU4CkQdxq8MSDWPTiQwxijeEm46XzxoSPqB8_CXn0xcvlVg3CkS554MTfw9ZgeEzR=
+3r3i4N254nPNAQOpuftMT7mxaoPdqlPlgPqTc" fillcolor=3D"none" arcsize=3D"6%" st=
+yle=3D"v-text-anchor:middle;width:101.25pt;height:36.75pt;" stroke=3D"f" > =
+<w:anchorlock/> <a:textbox inset=3D"0,0,0,0"> <span style=3D"color:#ffffff;=
+ font-family:sans-serif, Arial; font-size:16px"> <![endif]--> <a href=3Dhtt=
+ps://c.gle/AKMee0e2x0reDC0D966MW2311-bXvd_j9yKhcC0n_nbwxo91oJaMbxEHBMvkh2XC=
+dn3XoPhclbsqVkYh8mU4CkQdxq8MSDWPTiQwxijeEm46XzxoSPqB8_CXn0xcvlVg3CkS554MTfw=
+9ZgeEzR3r3i4N254nPNAQOpuftMT7mxaoPdqlPlgPqTc style=3D"display: inline-block=
+; width: auto; background: transparent; color: #8AB4F8; font-family: 'Googl=
+e Sans', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spaci=
+ng: 0.2px; line-height: 1.5; margin: 0; text-align: left; text-decoration: =
+none; text-transform: none; padding: 16px 0px 16px 0px; mso-padding-alt: 0p=
+x; border-radius: 3px; mso-border-alt: none; box-sizing: border-box;" targe=
+t=3D_blank width=3D135>Try in the demo app</a> <!--[if mso]> </span> </a:te=
+xtbox> </a:roundrect> </td> </tr> </table> <![endif]--> </div> </td> </tr> =
+</table> </td> </tr> </table> </div> <!--[if mso | IE]> </td> </tr> </table=
+> <![endif]--> </td> </tr> </table> <!--[if mso | IE]> </td> </tr> </table>=
+ <![endif]--> </div> </td> </tr> </table> </td> </tr> <tr> <td style=3Dfont=
+-size:0px;word-break:break-word;> <div style=3Dline-height:20px;height:20px=
+;mso-line-height-alt:20px;> &nbsp;</div> </td> </tr> </table> </td> </tr> <=
+/table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td> <=
+/tr> </table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> <=
+/div> </td> </tr> </table> <table align=3Dcenter border=3D0 cellpadding=3D0=
+ cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection> <=
+tr> <td align=3Dcenter> <div role=3Dpresentation> <!--[if mso | IE]> <table=
+ align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D=
+"block-grid-outlook" style=3D"width:640px;" width=3D"640" > <tr> <td style=
+=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"> <![endif]=
+--> <div style=3D"margin:0 auto;max-width:640px;"> <table align=3Dcenter bo=
+rder=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:=
+100%;> <tr> <td style=3Dfont-size:0px;padding:0px;text-align:center;vertica=
+l-align:top; class=3Dblock-grid> <!--[if mso | IE]> <table role=3D"presenta=
+tion" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"v=
+ertical-align:top;width:640px;" > <![endif]--> <div class=3D"mj-column-per-=
+100 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;direction:l=
+tr;display:inline-block;vertical-align:top;width:100%;> <table border=3D0 c=
+ellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0p=
+x;vertical-align:top; width=3D100%> <tr> <td style=3Dfont-size:0px;word-bre=
+ak:break-word;> <div style=3Dline-height:48px;height:48px;mso-line-height-a=
+lt:48px;> &nbsp;</div> </td> </tr> </table> </div> <!--[if mso | IE]> </td>=
+ </tr> </table> <![endif]--> </td> </tr> </table> </div> <!--[if mso | IE]>=
+ </td> </tr> </table> <![endif]--> </div> </td> </tr> </table> <table align=
+=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation st=
+yle=3Dwidth:100%; class=3Dsection> <tr> <td align=3Dcenter> <div role=3Dpre=
+sentation> <!--[if mso | IE]> <table align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:640=
+px;" width=3D"640" > <tr> <td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;"> <![endif]--> <div style=3D"margin:0 auto;max-widt=
+h:640px;"> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0=
+ role=3Dpresentation style=3Dwidth:100%;> <tr> <td style=3D"font-size:0px;p=
+adding:0px 30px 0px 30px;text-align:center;vertical-align:top;mso-padding-a=
+lt:0px 28px 0px 28px;" class=3D"block-grid padding-0px-28px-0px-28px"> <!--=
+[if mso | IE]> <table role=3D"presentation" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0"> <tr> <td style=3D"vertical-align:top;width:584px;" > <![=
+endif]--> <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3Dfon=
+t-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-alig=
+n:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=
+=3Dpresentation width=3D100%> <tr> <td style=3D"background-color:#202124;bo=
+rder-bottom:1px solid transparent;border-left:1px solid transparent;border-=
+radius:32px;border-right:1px solid transparent;border-top:1px solid transpa=
+rent;vertical-align:top;padding:0px 20px 0px 20px;mso-padding-alt:0px 30px =
+0px 30px;" class=3Dpadding-0px-30px-0px-30px> <table border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td style=3Dfon=
+t-size:0px;word-break:break-word;> <div style=3Dline-height:20px;height:20p=
+x;mso-line-height-alt:24px; class=3D"height-24px line-height-24px"> &nbsp;<=
+/div> </td> </tr> <tr> <td> <table align=3Dcenter border=3D0 cellpadding=3D=
+0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3Dsection> =
+<tr> <td align=3Dcenter style=3Dfont-size:0px;text-align:center;vertical-al=
+ign:top;padding:0px;word-break:break-word;> <div role=3Dpresentation> <!--[=
+if mso | IE]> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0"> <tr> <td> <table role=3D"presentation" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0"> <tr> <td style=3D"vertical-align:top;width:522px=
+;" > <![endif]--> <div class=3D"mj-column-per-100 mj-outlook-group-fix" sty=
+le=3Dfont-size:0px;text-align:left;direction:ltr;display:inline-block;verti=
+cal-align:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D=
+0 role=3Dpresentation style=3Dborder-radius:0px;vertical-align:top; width=
+=3D100%> <tr> <td class=3Dtext-container style=3D"font-size:0px;padding:0px=
+ 0px 0px 0px;word-break:break-word;mso-padding-alt:0px 0px 0px 0px;text-ali=
+gn:center;"> <div class=3Dlinks-1A73E8-underline> <div style=3D"font-family=
+:'Google Sans', 'Roboto', Arial, sans-serif;font-weight:normal;letter-spaci=
+ng:0px;text-align:center;color:#F8FAFD;"> <h2 style=3D"margin: 0; font-size=
+: 24px; font-weight: 400; line-height: 1.50; mso-line-height-alt: 2.25em"> =
+Start building </h2> </div> </div> </td> </tr> </table> </div> <!--[if mso =
+| IE]> </td> </tr> </table> </td> </tr> </table> <![endif]--> </div> </td> =
+</tr> </table> </td> </tr> <tr> <td> <table align=3Dcenter border=3D0 cellp=
+adding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dwidth:100%; class=3D=
+section> <tr> <td align=3Dcenter style=3Dfont-size:0px;text-align:center;ve=
+rtical-align:top;padding:0px;word-break:break-word;> <!--[if mso | IE]> <ta=
+ble align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr>=
+ <td> <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0"> <tr> <td style=3D"vertical-align:top;width:522px;" > <![endif]-->=
+ <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3Dfont-size:0p=
+x;text-align:left;direction:ltr;display:inline-block;vertical-align:top;wid=
+th:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresenta=
+tion style=3Dborder-radius:0px;vertical-align:top; width=3D100%> <tr> <td s=
+tyle=3Dfont-size:0px;word-break:break-word;> <div style=3Dline-height:12px;=
+height:12px;mso-line-height-alt:12px;> &nbsp; </div> </td> </tr> <tr> <td> =
+<table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpre=
+sentation style=3Dwidth:100%; class=3Dsection> <tr> <td align=3Dcenter styl=
+e=3Dfont-size:0px;text-align:center;vertical-align:top;padding:0px;word-bre=
+ak:break-word;> <div role=3Dpresentation> <!--[if mso | IE]> <table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td> <ta=
+ble role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">=
+ <tr> <td style=3D"vertical-align:top;width:522px;" > <![endif]--> <div cla=
+ss=3D"mj-column-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text-al=
+ign:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;>=
+ <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation styl=
+e=3Dborder-radius:0px;vertical-align:top; width=3D100%> <tr> <td class=3D"p=
+adding-0px-0px-0px-0px text-container" style=3D"font-size:0px;padding:0px 0=
+px 8px 0px;word-break:break-word;mso-padding-alt:0px 0px 0px 0px;text-align=
+:center;"> <div class=3Dlinks-8AB4F8-underline> <div style=3D"font-family:'=
+Google Sans Text', Roboto, sans-serif;font-size:14px;font-weight:normal;let=
+ter-spacing:none;line-height:1.5;text-align:center;mso-line-height-alt:1.31=
+3em;color:#E8EAED;"> <p style=3D"margin: 0;"> You can use our SDKs for Pyth=
+on, JavaScript, and Go, or make a direct REST API call with cURL. <a href=
+=3Dhttps://c.gle/AKMee0eDaqXcAbb6xcjLb3ydrR4NmJwiBSM--nyJ9NfpLSqYBRVY3kxbYo=
+GqnoN02Xh3JNyPyiQ-ym2TOR6hjsSlxv_KharvmU2Es2MNwcf9cfJY-nQTsK7g5DEJMFPvptfil=
+3x4IaPG7ul84JDFHwCqQ4gw1jvBU6IhHSaWRA data-k-tracking-label=3DBody:Getyourp=
+aidAPIkey target=3D_blank rel=3Dnoopener style=3D"color: rgb(138, 180, 248)=
+; text-decoration: underline;">Get your paid API key</a> and start creating=
+.&nbsp; </p> </div> </div> </td> </tr> <tr> <td style=3Dfont-size:0px;word-=
+break:break-word;> <div style=3Dline-height:20px;height:20px;mso-line-heigh=
+t-alt:20px;> &nbsp; </div> </td> </tr> </table> </div> <!--[if mso | IE]> <=
+/td> </tr> </table> </td> </tr> </table> <![endif]--> </div> </td> </tr> </=
+table> </td> </tr> <tr> <td> <table align=3Dcenter border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbackground-color:transpare=
+nt;width:100%;border-radius:24px; class=3Dsection> <tr> <td align=3Dcenter =
+style=3D"border-bottom:1px none #80868B;border-left:1px none #80868B;border=
+-right:1px none #80868B;border-top:1px none #80868B;border-radius:24px;font=
+-size:0px;text-align:center;vertical-align:top;padding:0px 0px 0px 0px;word=
+-break:break-word;mso-padding-alt:0px 0px 0px 0px;"> <div role=3Dpresentati=
+on> <!--[if mso | IE]> <table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"> <tr> <td> <![endif]--> <table align=3Dcenter border=
+=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <tr>=
+ <td style=3Dbackground-color:transparent;line-height:0;font-size:0;directi=
+on:ltr;> <!--[if mso | IE]> <table role=3D"presentation" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"vertical-align:middle;wid=
+th:520px;" > <![endif]--> <div class=3D"mj-column-per-100 mj-outlook-group-=
+fix" style=3Dfont-size:0px;text-align:left;direction:ltr;display:inline-blo=
+ck;vertical-align:middle;width:100%;> <table border=3D0 cellpadding=3D0 cel=
+lspacing=3D0 role=3Dpresentation width=3D100%> <tr> <td style=3Dbackground-=
+color:#1A1A1A;border-radius:24px;vertical-align:middle;padding:30px;mso-pad=
+ding-alt:24px; class=3Dpadding-24px> <table border=3D0 cellpadding=3D0 cell=
+spacing=3D0 role=3Dpresentation width=3D100%> <tr> <td class=3Dtext-contain=
+er style=3D"font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;mso=
+-padding-alt:0px 0px 0px 0px;text-align:left;"> <div class=3Dlinks-4285F4> =
+<div class=3Dgeist-font style=3Dfont-family:monospace;font-size:13px;font-w=
+eight:400;letter-spacing:none;line-height:1.50;text-align:left;mso-line-hei=
+ght-alt:1.25em;color:#FFFFFF;> <p style=3D"margin: 0;"> <span style=3D"colo=
+r: #8ab4f8;">from</span> google <span style=3D"color: #8ab4f8;">import</spa=
+n> genai </p> <p style=3D"margin: 0;"> <br> client =3D genai.Client() </p> =
+<p style=3D"margin: 0;"> &nbsp; </p> <p style=3D"margin: 0;"> <span style=
+=3D"color: #f28b82;"># Build with Flash</span> </p> <p style=3D"margin: 0;"=
+> interaction =3D client.interactions.create( </p> <p style=3D"margin: 0;">=
+ &nbsp; &nbsp; model=3D<span style=3D"color: #5bb974;">"gemini-3.6-flash"</=
+span>, </p> <p style=3D"margin: 0;"> &nbsp; &nbsp; <span style=3D"color: #8=
+ab4f8;">input</span>=3D<span style=3D"color: #5bb974;">"Do something cool."=
+</span>, </p> <p style=3D"margin: 0;"> ) </p> <p style=3D"margin: 0;"> <br>=
+ <span style=3D"color: #8ab4f8;">print</span>(interaction.output_text) </p>=
+ <p style=3D"margin: 0;"> <br> <span style=3D"color: #f28b82;"># Build with=
+ Flash-Lite</span> </p> <p style=3D"margin: 0;"> interaction =3D client.int=
+eractions.create( </p> <p style=3D"margin: 0;"> &nbsp; &nbsp; model=3D<span=
+ style=3D"color: #5bb974;">"gemini-3.5-flash-lite"</span>, </p> <p style=3D=
+"margin: 0;"> &nbsp; &nbsp; <span style=3D"color: #8ab4f8;">input</span>=3D=
+<span style=3D"color: #5bb974;">"Do something cool with these 50 items."</s=
+pan>, </p> <p style=3D"margin: 0;"> ) </p> <p style=3D"margin: 0;"> <br> <s=
+pan style=3D"color: #8ab4f8;">print</span>(interaction.output_text) </p> </=
+div> </div> </td> </tr> </table> </td> </tr> </table> </div> <!--[if mso | =
+IE]> </td> </tr> </table> <![endif]--> </td> </tr> </table> <!--[if mso | I=
+E]> </td> </tr> </table> <![endif]--> </div> </td> </tr> </table> </td> </t=
+r> </table> </div> <!--[if mso | IE]> </td> </tr> </table> </td> </tr> </ta=
+ble> <![endif]--> </td> </tr> </table> </td> </tr> <tr> <td style=3Dfont-si=
+ze:0px;word-break:break-word;> <div style=3Dline-height:20px;height:20px;ms=
+o-line-height-alt:30px; class=3D"height-30px line-height-30px"> &nbsp;</div=
+> </td> </tr> </table> </td> </tr> </table> </div> <!--[if mso | IE]> </td>=
+ </tr> </table> <![endif]--> </td> </tr> </table> </div> <!--[if mso | IE]>=
+ </td> </tr> </table> <![endif]--> </div> </td> </tr> </table> <table align=
+=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation st=
+yle=3Dwidth:100%; class=3Dsection> <tr> <td align=3Dcenter> <div role=3Dpre=
+sentation> <!--[if mso | IE]> <table align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:640=
+px;" width=3D"640" > <tr> <td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;"> <![endif]--> <div style=3D"margin:0 auto;max-widt=
+h:640px;"> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0=
+ role=3Dpresentation style=3Dwidth:100%;> <tr> <td style=3Dfont-size:0px;pa=
+dding:0px;text-align:center;vertical-align:top; class=3Dblock-grid> <!--[if=
+ mso | IE]> <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0"> <tr> <td style=3D"vertical-align:top;width:640px;" > <![end=
+if]--> <div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3Dfont-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpr=
+esentation style=3Dborder-radius:0px;vertical-align:top; width=3D100%> <tr>=
+ <td style=3Dfont-size:0px;word-break:break-word;> <div style=3Dline-height=
+:32px;height:32px;mso-line-height-alt:48px; class=3D"height-48px line-heigh=
+t-48px">&nbsp; </div> </td> </tr> </table> </div> <!--[if mso | IE]> </td> =
+</tr> </table> <![endif]--> </td> </tr> </table> </div> <!--[if mso | IE]> =
+</td> </tr> </table> <![endif]--> </div> </td> </tr> </table> <table align=
+=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation st=
+yle=3Dwidth:100%; class=3Dsection> <tr> <td align=3Dcenter> <div role=3Dpre=
+sentation> <!--[if mso | IE]> <table align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:640=
+px;" width=3D"640" > <tr> <td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;"> <![endif]--> <div style=3D"margin:0 auto;max-widt=
+h:640px;"> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0=
+ role=3Dpresentation style=3Dwidth:100%;> <tr> <td style=3D"font-size:0px;p=
+adding:0px 30px 0px 30px;text-align:center;vertical-align:top;mso-padding-a=
+lt:0px 28px 0px 28px;" class=3D"block-grid padding-0px-28px-0px-28px"> <!--=
+[if mso | IE]> <table role=3D"presentation" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0"> <tr> <td style=3D"vertical-align:top;width:292px;" > <![=
+endif]--> <div class=3D"mj-column-per-50 mj-outlook-group-fix" style=3Dfont=
+-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align=
+:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3D=
+presentation width=3D100%> <tr> <td style=3D"border-radius:0px;vertical-ali=
+gn:top;padding:0px 0px 0px 0px;mso-padding-alt:0px 10px 0px 0px;" class=3Dp=
+adding-0px-10px-0px-0px> <table border=3D0 cellpadding=3D0 cellspacing=3D0 =
+role=3Dpresentation width=3D100%> <tr> <td> <table align=3Dcenter border=3D=
+0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbackground-co=
+lor:transparent;width:100%;border-radius:24px; class=3Dsection> <tr> <td al=
+ign=3Dcenter style=3D"border-radius:24px;font-size:0px;text-align:center;ve=
+rtical-align:top;padding:20px 24px 16px 24px;word-break:break-word;mso-padd=
+ing-alt:0px 31px 16px 28px;" class=3Dpadding-0px-28px-16px-28px> <div role=
+=3Dpresentation> <!--[if mso | IE]> <table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0"> <tr> <td> <![endif]--> <table align=3Dce=
+nter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=
+=3D100%> <tr> <td style=3Dbackground-color:transparent;line-height:0;font-s=
+ize:0;direction:ltr;> <!--[if mso | IE]> <table role=3D"presentation" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"vertical-ali=
+gn:top;width:226px;" > <![endif]--> <div class=3D"mj-column-per-100 mj-outl=
+ook-group-fix" style=3Dfont-size:0px;text-align:left;direction:ltr;display:=
+inline-block;vertical-align:top;width:100%;> <table border=3D0 cellpadding=
+=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical=
+-align:top; width=3D100%> <tr> <td class=3Dtext-container style=3D"font-siz=
+e:0px;padding:0px 0px 0px 0px;word-break:break-word;text-align:center;"> <d=
+iv class=3Dlinks-1A73E8-underline> <div style=3D"font-family:'Google Sans',=
+ 'Open Sans', Roboto, sans-serif;font-weight:normal;letter-spacing:none;tex=
+t-align:center;color:#F8FAFD;"> <h3 style=3D"margin: 0; font-size: 18px; fo=
+nt-weight: normal; line-height: 1.50; mso-line-height-alt: 1.688em"> Docume=
+ntation </h3> </div> </div> </td> </tr> <tr> <td style=3Dfont-size:0px;word=
+-break:break-word;> <div style=3Dline-height:8px;height:8px;mso-line-height=
+-alt:8px;> &nbsp; </div> </td> </tr> <tr> <td class=3Dtext-container style=
+=3D"font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;text-align:=
+center;"> <div class=3Dlinks-1A73E8-underline> <div style=3D"font-family:'R=
+oboto', 'Open Sans', Arial, sans-serif;font-size:14px;font-weight:normal;le=
+tter-spacing:none;line-height:1.5;text-align:center;mso-line-height-alt:1.3=
+13em;color:#E8EAED;"> <p style=3D"margin: 0;"> Explore all model features, =
+technical details, and prompting guides. </p> </div> </div> </td> </tr> <tr=
+> <td valign=3Dmiddle class=3Dbutton-container style=3D"font-size:0px;paddi=
+ng:10px 0px 10px 0px;word-break:break-word;mso-padding-alt:10px 0px 10px 0p=
+x;text-align:center;"> <div> <!--[if mso]> <table width=3D"100%" align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-spa=
+cing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;"=
+> <tr> <td align=3D"center" class=3D"mso-button-dark-mode"> <a:roundrect xm=
+lns:a=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-co=
+m:office:word" href=3D"https://c.gle/AKMee0c6EQokPHWkgG4DaOQIhC9rRgWRRAgTaN=
+_6qDkkVm-Nvo8P-kC17Sg2n8EGx2v1BsXYQlNIclTCyJwtSdQlf1N2OS09wOaiSeENIUNUPDpHr=
+2G_o8wphz5iyOupGrRlti7lvDtDbmQaGbPu7LGMAFCBrSEiCY4KkC3f65ngU5FoId9GmKY" fil=
+lcolor=3D"none" arcsize=3D"24%" style=3D"v-text-anchor:middle;width:117.75p=
+t;height:36.75pt;" strokecolor=3D"#5F6368" strokeweight=3D"0.75pt" > <w:anc=
+horlock/> <a:textbox inset=3D"0,0,0,0"> <center style=3D"color:#ffffff; fon=
+t-family:sans-serif, Arial; font-size:16px"> <![endif]--> <a href=3Dhttps:/=
+/c.gle/AKMee0c6EQokPHWkgG4DaOQIhC9rRgWRRAgTaN_6qDkkVm-Nvo8P-kC17Sg2n8EGx2v1=
+BsXYQlNIclTCyJwtSdQlf1N2OS09wOaiSeENIUNUPDpHr2G_o8wphz5iyOupGrRlti7lvDtDbmQ=
+aGbPu7LGMAFCBrSEiCY4KkC3f65ngU5FoId9GmKY style=3D"display: table; width: 70=
+%; background: transparent; color: #8AB4F8; font-family: 'Google Sans Text-=
+Medium', Arial, sans-serif; font-size: 14px; font-weight: 500; letter-spaci=
+ng: 0.2px; line-height: 1.5; margin: 0 auto; text-align: center; text-decor=
+ation: none; text-transform: none; padding: 0; mso-padding-alt: 0px; border=
+-radius: 12px; mso-border-alt: none; box-sizing: border-box;" target=3D_bla=
+nk width=3D158><span style=3D"display:table-cell;padding:13px 28px 13px 28p=
+x;border-radius:12px;border-left:1px solid #5F6368;border-right:1px solid #=
+5F6368;border-top:1px solid #5F6368;border-bottom:1px solid #5F6368;mso-bor=
+der-alt:none;">Read the docs</span></a> <!--[if mso]> </center> </a:textbox=
+> </a:roundrect> </td> </tr> </table> <![endif]--> </div> </td> </tr> </tab=
+le> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr>=
+ </table> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div> </td>=
+ </tr> </table> </td> </tr> </table> </td> </tr> </table> </div> <!--[if ms=
+o | IE]> </td> <td style=3D"vertical-align:top;width:292px;" > <![endif]-->=
+ <div class=3D"mj-column-per-50 mj-outlook-group-fix" style=3Dfont-size:0px=
+;text-align:left;direction:ltr;display:inline-block;vertical-align:top;widt=
+h:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentat=
+ion width=3D100%> <tr> <td style=3D"border-radius:0px;vertical-align:top;pa=
+dding:0px 0px 0px 0px;mso-padding-alt:0px 0px 0px 10px;" class=3Dpadding-0p=
+x-0px-0px-10px> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpr=
+esentation width=3D100%> <tr> <td> <table align=3Dcenter border=3D0 cellpad=
+ding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbackground-color:trans=
+parent;width:100%;border-radius:24px; class=3Dsection> <tr> <td align=3Dcen=
+ter style=3D"border-radius:24px;font-size:0px;text-align:center;vertical-al=
+ign:top;padding:0px 28px 16px 28px;word-break:break-word;mso-padding-alt:0p=
+x 35px 16px 28px;" class=3Dpadding-0px-35px-16px-28px> <div role=3Dpresenta=
+tion> <!--[if mso | IE]> <table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0"> <tr> <td> <![endif]--> <table align=3Dcenter bord=
+er=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <t=
+r> <td style=3Dbackground-color:transparent;line-height:0;font-size:0;direc=
+tion:ltr;> <!--[if mso | IE]> <table role=3D"presentation" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"vertical-align:top;widt=
+h:226px;" > <![endif]--> <div class=3D"mj-column-per-100 mj-outlook-group-f=
+ix" style=3Dfont-size:0px;text-align:left;direction:ltr;display:inline-bloc=
+k;vertical-align:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspa=
+cing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertical-align:top; =
+width=3D100%> <tr> <td class=3Dtext-container style=3D"font-size:0px;paddin=
+g:0px 0px 0px 0px;word-break:break-word;text-align:center;"> <div class=3Dl=
+inks-1A73E8-underline> <div style=3D"font-family:'Google Sans', 'Open Sans'=
+, Roboto, sans-serif;font-weight:normal;letter-spacing:none;text-align:cent=
+er;color:#F8FAFD;"> <h3 style=3D"margin: 0; font-size: 18px; font-weight: n=
+ormal; line-height: 1.50; mso-line-height-alt: 1.688em"> Pricing </h3> </di=
+v> </div> </td> </tr> <tr> <td style=3Dfont-size:0px;word-break:break-word;=
+> <div style=3Dline-height:8px;height:8px;mso-line-height-alt:8px;> &nbsp; =
+</div> </td> </tr> <tr> <td class=3Dtext-container style=3D"font-size:0px;p=
+adding:0px 0px 0px 0px;word-break:break-word;text-align:center;"> <div clas=
+s=3Dlinks-1A73E8-underline> <div style=3D"font-family:'Roboto', 'Open Sans'=
+, Arial, sans-serif;font-size:14px;font-weight:normal;letter-spacing:none;l=
+ine-height:1.5;text-align:center;mso-line-height-alt:1.313em;color:#E8EAED;=
+"> <p style=3D"margin: 0;"> Review all pricing tiers, token limits, and det=
+ailed API cost breakdowns. </p> </div> </div> </td> </tr> <tr> <td valign=
+=3Dmiddle class=3Dbutton-container style=3D"font-size:0px;padding:10px 0px =
+10px 0px;word-break:break-word;mso-padding-alt:10px 0px 10px 0px;text-align=
+:center;"> <div> <!--[if mso]> <table width=3D"100%" align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-spacing:0;borde=
+r-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;"> <tr> <td a=
+lign=3D"center" class=3D"mso-button-dark-mode"> <a:roundrect xmlns:a=3D"urn=
+:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:wor=
+d" href=3D"https://c.gle/AKMee0dWW-_LpmSOIQL3c_fLo6at4neL_VDJBeRZq9zxImvyzM=
+9_pcVmMudA3XjkPGoAETRO2UeQ0e-hLluoYawhxPLJ43bTKN2i7EtBItVGGUlRx4JVCG7NRp8Zd=
+G7uTyIHl1aCuRvKC6Fj45VT9tWXNh8IjcGUJfchNb40lRyp0R1xFaFKdrCKcBpSmWRp" fillco=
+lor=3D"none" arcsize=3D"24%" style=3D"v-text-anchor:middle;width:121.5pt;he=
+ight:36.75pt;" strokecolor=3D"#5F6368" strokeweight=3D"0.75pt" > <w:anchorl=
+ock/> <a:textbox inset=3D"0,0,0,0"> <center style=3D"color:#ffffff; font-fa=
+mily:sans-serif, Arial; font-size:16px"> <![endif]--> <a href=3Dhttps://c.g=
+le/AKMee0dWW-_LpmSOIQL3c_fLo6at4neL_VDJBeRZq9zxImvyzM9_pcVmMudA3XjkPGoAETRO=
+2UeQ0e-hLluoYawhxPLJ43bTKN2i7EtBItVGGUlRx4JVCG7NRp8ZdG7uTyIHl1aCuRvKC6Fj45V=
+T9tWXNh8IjcGUJfchNb40lRyp0R1xFaFKdrCKcBpSmWRp style=3D"display: table; widt=
+h: 72%; background: transparent; color: #8AB4F8; font-family: 'Google Sans =
+Text-Medium', Arial, sans-serif; font-size: 14px; font-weight: 500; letter-=
+spacing: 0.2px; line-height: 1.50; margin: 0 auto; text-align: center; text=
+-decoration: none; text-transform: none; padding: 0; mso-padding-alt: 0px; =
+border-radius: 12px; mso-border-alt: none; box-sizing: border-box;" target=
+=3D_blank width=3D163><span style=3D"display:table-cell;padding:13px 28px 1=
+3px 28px;border-radius:12px;border-left:1px solid #5F6368;border-right:1px =
+solid #5F6368;border-top:1px solid #5F6368;border-bottom:1px solid #5F6368;=
+mso-border-alt:none;">See pricing</span></a> <!--[if mso]> </center> </a:te=
+xtbox> </a:roundrect> </td> </tr> </table> <![endif]--> </div> </td> </tr> =
+</table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td> =
+</tr> </table> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div> =
+</td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </div> <!--[=
+if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr> </table> </div>=
+ <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div> </td> </tr> </=
+table> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 rol=
+e=3Dpresentation style=3Dbackground-color:transparent;width:100%; class=3Ds=
+ection> <tr> <td align=3Dcenter style=3Dmso-padding-left-alt:0;> <!--[if ms=
+o | IE]> <v:rect style=3D"width:640px;height:272px;" xmlns:v=3D"urn:schemas=
+-microsoft-com:vml" fill=3D"true" stroke=3D"false"> <v:fill origin=3D"0,0.5=
+" position=3D"0,0.5" aspect=3D"atleast" src=3D"https://gstatic.com/growthla=
+b/api/VdqkvJH3Mpeb70AVyOrjjExfG96pVePwvOwxI9X5.png" color=3D"none" type=3D"=
+frame" /> <v:textbox style=3D"mso-fit-shape-to-text:true" inset=3D"0,0,0,0"=
+> <![endif]--> <div role=3Dpresentation> <!--[if mso | IE]> <table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"block-gr=
+id-outlook" style=3D"width:640px;" width=3D"640" > <tr> <td style=3D"line-h=
+eight:0px;font-size:0px;mso-line-height-rule:exactly;height:272px;"> <![end=
+if]--> <div style=3D"background:transparent;background-color:transparent;ma=
+rgin:0 auto;border-radius:32px;max-width:640px;"> <div style=3Dline-height:=
+0;font-size:0;> <table align=3Dcenter background=3Dhttps://gstatic.com/grow=
+thlab/api/VdqkvJH3Mpeb70AVyOrjjExfG96pVePwvOwxI9X5.png border=3D0 cellpaddi=
+ng=3D0 cellspacing=3D0 role=3Dpresentation style=3D"background:center botto=
+m / cover no-repeat;background-image:url('https://gstatic.com/growthlab/api=
+/VdqkvJH3Mpeb70AVyOrjjExfG96pVePwvOwxI9X5.png');background-position:center =
+bottom;background-size:cover;background-repeat:no-repeat;width:100%;border-=
+radius:32px;"> <tr> <td style=3D"border-radius:32px;font-size:0px;padding:0=
+px 30px 0px 30px;text-align:center;vertical-align:top;mso-padding-alt:0px 2=
+8px 0px 28px;mso-padding-left-alt:0;mso-padding-right-alt:0;" class=3D"bloc=
+k-grid padding-0px-28px-0px-28px"> <!--[if mso | IE]> <table role=3D"presen=
+tation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td style=3D=
+"font-size:0;line-height:0;width:28px;"> <table border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse:collap=
+se;border-spacing:0px;"> <tr> <td style=3D"font-size:0;line-height:0;width:=
+28px;">&nbsp;</td> </tr> </table> </td> <td> <![endif]--> <table align=3Dce=
+nter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=
+=3D100%> <tr> <td style=3Dbackground-color:transparent;line-height:0;font-s=
+ize:0;direction:ltr;border-radius:32px;> <!--[if mso | IE]> <table role=3D"=
+presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <td st=
+yle=3D"vertical-align:top;width:584px;" > <![endif]--> <div class=3D"mj-col=
+umn-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;dir=
+ection:ltr;display:inline-block;vertical-align:top;width:100%;> <table bord=
+er=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation width=3D100%> <t=
+r> <td style=3D"background-color:transparent;border-radius:24px;vertical-al=
+ign:top;padding:0px 24px 0px 24px;mso-padding-left-alt:0;mso-padding-right-=
+alt:0;"> <!--[if mso]> <table width=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse:collapse;=
+border-spacing:0px;"> <tr> <td style=3D"font-size:0;line-height:0;width:24p=
+x;"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"border-collapse:collapse;border-spacing:0px;"> <tr> <td st=
+yle=3D"font-size:0;line-height:0;width:24px;">&nbsp;</td> </tr> </table> </=
+td> <td> <![endif]--> <table border=3D0 cellpadding=3D0 cellspacing=3D0 rol=
+e=3Dpresentation width=3D100%> <tr> <td style=3Dfont-size:0px;word-break:br=
+eak-word;mso-padding-left-alt:0;mso-padding-right-alt:0;> <div style=3Dline=
+-height:160px;height:160px;mso-line-height-alt:160px;> &nbsp;</div> </td> <=
+/tr> <tr> <td class=3Dtext-container style=3D"font-size:0px;padding:0px 0px=
+ 0px 0px;word-break:break-word;mso-padding-left-alt:0;mso-padding-right-alt=
+:0;text-align:center;"> <div class=3Dlinks-1A73E8-underline> <div style=3D"=
+font-family:'Google Sans Text', Roboto, sans-serif;font-weight:normal;lette=
+r-spacing:none;text-align:center;color:#F1F3F4;"> <h1 style=3D"margin: 0; f=
+ont-size: 16px; font-weight: normal; line-height: 1.50; mso-line-height-alt=
+: 1.5em"> Happy building,&nbsp; </h1> <h1 style=3D"margin: 0; font-size: 16=
+px; font-weight: normal; line-height: 1.50; mso-line-height-alt: 1.5em"> <s=
+trong>The Google AI Studio team</strong> </h1> </div> </div> </td> </tr> <t=
+r> <td style=3Dfont-size:0px;word-break:break-word;mso-padding-left-alt:0;m=
+so-padding-right-alt:0;> <div style=3Dline-height:24px;height:24px;mso-line=
+-height-alt:24px;> &nbsp;</div> </td> </tr> <tr> <td style=3Dfont-size:0px;=
+word-break:break-word;mso-padding-left-alt:0;mso-padding-right-alt:0;> <div=
+ style=3Dline-height:40px;height:40px;mso-line-height-alt:40px;> &nbsp;</di=
+v> </td> </tr> </table> <!--[if mso]> </td> <td style=3D"font-size:0;line-h=
+eight:0;width:24px;"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" role=3D"presentation" style=3D"border-collapse:collapse;border-spacing:0=
+px;"> <tr> <td style=3D"font-size:0;line-height:0;width:24px;">&nbsp;</td> =
+</tr> </table> </td> </tr> </table> <![endif]--> </td> </tr> </table> </div=
+> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr> </table>=
+ <!--[if mso | IE]> </td> <td style=3D"font-size:0;line-height:0;width:28px=
+;"> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"present=
+ation" style=3D"border-collapse:collapse;border-spacing:0px;"> <tr> <td sty=
+le=3D"font-size:0;line-height:0;width:28px;">&nbsp;</td> </tr> </table> </t=
+d> </tr> </table> <![endif]--> </td> </tr> </table> </div> </div> <!--[if m=
+so | IE]> </td> </tr> </table> <![endif]--> </div> <!--[if mso | IE]> <p st=
+yle=3D"mso-line-height-rule:exactly;margin:0;mso-hide:all;font-size:0;line-=
+height:0;"> <o:p xmlns:o=3D"urn:schemas-microsoft-com:office:office"> &nbsp=
+; </o:p> </p> </v:textbox> </v:rect> <![endif]--> </td> </tr> </table> <tab=
+le align=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresent=
+ation style=3Dwidth:100%; class=3Dsection> <tr> <td align=3Dcenter> <div ro=
+le=3Dpresentation> <!--[if mso | IE]> <table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"w=
+idth:640px;" width=3D"640" > <tr> <td style=3D"line-height:0px;font-size:0p=
+x;mso-line-height-rule:exactly;"> <![endif]--> <div style=3D"margin:0 auto;=
+max-width:640px;"> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspa=
+cing=3D0 role=3Dpresentation style=3Dwidth:100%;> <tr> <td style=3Dfont-siz=
+e:0px;padding:0px;text-align:center;vertical-align:top; class=3Dblock-grid>=
+ <!--[if mso | IE]> <table role=3D"presentation" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0"> <tr> <td style=3D"vertical-align:top;width:640px;=
+" > <![endif]--> <div class=3D"mj-column-per-100 mj-outlook-group-fix" styl=
+e=3Dfont-size:0px;text-align:left;direction:ltr;display:inline-block;vertic=
+al-align:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0=
+ role=3Dpresentation style=3Dborder-radius:0px;vertical-align:top; width=3D=
+100%> <tr> <td style=3Dfont-size:0px;word-break:break-word;> <div style=3Dl=
+ine-height:48px;height:48px;mso-line-height-alt:48px;> &nbsp;</div> </td> <=
+/tr> </table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> <=
+/td> </tr> </table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif=
+]--> </div> </td> </tr> </table> <table align=3Dcenter border=3D0 cellpaddi=
+ng=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbackground-color:#1A1A1A=
+;width:100%; class=3Dsection> <tr> <td align=3Dcenter> <div role=3Dpresenta=
+tion> <!--[if mso | IE]> <table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"block-grid-outlook" style=3D"width:640px;=
+" width=3D"640" > <tr> <td style=3D"line-height:0px;font-size:0px;mso-line-=
+height-rule:exactly;"> <![endif]--> <div style=3D"background:transparent;ba=
+ckground-color:transparent;margin:0 auto;max-width:640px;"> <table align=3D=
+center border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=
+=3Dbackground-color:transparent;width:100%;> <tr> <td style=3D"font-size:0p=
+x;padding:16px 30px 0px 30px;text-align:center;vertical-align:top;mso-paddi=
+ng-alt:16px 70px 16px 70px;" class=3D"block-grid padding-16px-70px-16px-70p=
+x"> <!--[if mso | IE]> <table role=3D"presentation" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0"> <tr> <td style=3D"vertical-align:top;width:180px=
+;" > <![endif]--> <div class=3D"mj-column-per-38 mj-outlook-group-fix" styl=
+e=3Dfont-size:0px;text-align:left;direction:ltr;display:inline-block;vertic=
+al-align:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0=
+ role=3Dpresentation style=3Dborder-radius:0px;vertical-align:top; width=3D=
+100%> <tr> <td class=3Dtext-container style=3D"font-size:0px;padding:0px 0p=
+x 0px 0px;word-break:break-word;mso-padding-alt:0px 0px 0px 0px;text-align:=
+left;"> <div class=3Dlinks-5F6368> <div style=3D"font-family:'Google Sans T=
+ext', Roboto, sans-serif;font-size:14px;font-weight:normal;letter-spacing:n=
+one;line-height:1.50;text-align:left;mso-line-height-alt:1.313em;color:#1C1=
+B1B;"> <div class=3Dimage-list> <ul class=3Dul-0aaac300-83f7-11f1-89b5-1514=
+a8dd340e style=3D"display: block; margin-top: 0px; margin-bottom: 0px; padd=
+ing-left: 0px; list-style-type: none; mso-para-margin-left: 0px;"> <li clas=
+s=3Dlevel1 style=3D"background: left top / 19px no-repeat; padding-left: 29=
+px; margin-left: 0px; margin-top: 0px; margin-bottom: 0px; background-image=
+: url(https://gstatic.com/growthlab/api/Kb20ctIwf0obdcjzG62bXDGOwiuvGVa4JyZ=
+hdZyo.png); background-size: 19px; background-repeat: no-repeat; background=
+-position: left top;"> <span class=3Dlist-item><a href=3Dhttps://c.gle/AKMe=
+e0dgwz8PfdkCv-vtJQhT1W-6L9DBX-oicmpVBrkI-PrdrsDX7-I2gxMDdswYH47mfz-10iXfuJn=
+-HIqdyv3wmzhWqI4krEvFQuLzct5jt5-WmNDUDmKK381MjFMXMqVNS8zHwjOfTbsScoiAiZolRD=
+1SV3KwSaV9o2EMlpfRUwp56QC-BRWj-1sh89OUwJWR32Tt8W8ng45MAotNT7qggBXl4Lbw-EEZu=
+ZplfECpFODHolLy26g09YvkPI77Ph1UE4I data-k-tracking-label=3DFooter:Promptmod=
+els target=3D_blank rel=3Dnoopener style=3D"color: rgb(95, 99, 104); text-d=
+ecoration: none;">Prompt models</a></span></li> </ul> </div> </div> </div> =
+</td> </tr> </table> </div> <!--[if mso | IE]> </td> <td style=3D"vertical-=
+align:top;width:175px;" > <![endif]--> <div class=3D"mj-column-per-35 mj-ou=
+tlook-group-fix" style=3Dfont-size:0px;text-align:left;direction:ltr;displa=
+y:inline-block;vertical-align:top;width:100%;> <table border=3D0 cellpaddin=
+g=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-radius:0px;vertica=
+l-align:top; width=3D100%> <tr> <td class=3D"padding-0px-19px-0px-0px text-=
+container" style=3D"font-size:0px;padding:24px 0px 0px 0px;word-break:break=
+-word;mso-padding-alt:0px 19px 0px 0px;text-align:left;"> <div class=3Dlink=
+s-5F6368> <div style=3D"font-family:'Google Sans Text', Roboto, sans-serif;=
+font-size:14px;font-weight:normal;letter-spacing:none;line-height:1.50;text=
+-align:left;mso-line-height-alt:1.313em;color:#1C1B1B;"> <div class=3Dimage=
+-list> <ul class=3Dul-0aac2290-83f7-11f1-89b5-1514a8dd340e style=3D"display=
+: block; margin-top: 0px; margin-bottom: 0px; padding-left: 0px; list-style=
+-type: none; mso-para-margin-left: 0px;"> <li class=3Dlevel1 style=3D"backg=
+round: left top / 19px no-repeat; padding-left: 31px; margin-left: 0px; mar=
+gin-top: 0px; margin-bottom: 0px; background-image: url(https://gstatic.com=
+/growthlab/api/Y6PRB1oNvYv8cj568kgliVq0gZZE1lGSHIjaiZd9.png); background-si=
+ze: 19px; background-repeat: no-repeat; background-position: left top;"> <s=
+pan class=3Dlist-item><a href=3Dhttps://c.gle/AKMee0dh-j3pmpf3-fMtwW_nNTYoC=
+DuzlNjJFPs0owiuU_AuQW3VUv9KH_8UhrF6Oy2JkdW5Bv6aK_UvwR-Vb06FcCDhWWDpRrPBGnAC=
+CLoyELOiSFI_KqqZiHLLWqk1Ro6JqRcH7XkjeKWCatyRftE_4LepkuMtf2u2FYEox4m6EHDUNby=
+lCR_JuOA5mE0McnxKqsrNP2ZVDG5576BPjAAI3OBjUByVfow2MaPJsQ5I3HdD6slKFA data-k-=
+tracking-label=3DFooter:ManageAPIkeys target=3D_blank rel=3Dnoopener style=
+=3D"color: rgb(95, 99, 104); text-decoration: none;">Manage API keys</a></s=
+pan></li> </ul> </div> </div> </div> </td> </tr> </table> </div> <!--[if ms=
+o | IE]> </td> <td style=3D"vertical-align:top;width:145px;" > <![endif]-->=
+ <div class=3D"mj-column-per-27 mj-outlook-group-fix" style=3Dfont-size:0px=
+;text-align:left;direction:ltr;display:inline-block;vertical-align:top;widt=
+h:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentat=
+ion style=3Dborder-radius:24px;vertical-align:top; width=3D100%> <tr> <td c=
+lass=3D"padding-0px-0px-0px-37px text-container" style=3D"font-size:0px;pad=
+ding:24px 0px 0px 0px;word-break:break-word;mso-padding-alt:0px 0px 0px 37p=
+x;text-align:left;"> <div class=3Dlinks-5F6368> <div style=3D"font-family:'=
+Google Sans Text', Roboto, sans-serif;font-size:14px;font-weight:normal;let=
+ter-spacing:none;line-height:1.50;text-align:left;mso-line-height-alt:1.313=
+em;color:#1C1B1B;"> <div class=3Dimage-list> <ul class=3Dul-0aad5b10-83f7-1=
+1f1-89b5-1514a8dd340e style=3D"display: block; margin-top: 0px; margin-bott=
+om: 0px; padding-left: 0px; list-style-type: none; mso-para-margin-left: 0p=
+x;"> <li class=3Dlevel1 style=3D"background: left top / 20px no-repeat; pad=
+ding-left: 29px; margin-left: 0px; margin-top: 0px; margin-bottom: 0px; bac=
+kground-image: url(https://gstatic.com/growthlab/api/1egiT4SOCELtF0oyggwB2C=
+W23RW0OTn2QVkiLqkv.png); background-size: 20px; background-repeat: no-repea=
+t; background-position: left top;"> <span class=3Dlist-item><a href=3Dhttps=
+://c.gle/AKMee0cXthB2ZcaFgaYdJlOBN-gOeRZ4Axc3dZFWSrFjc7DRYkPwDcNily9rAyvqgc=
+o4HJ_HqFxqUE_BRQJdDDxT9CRDibCdU_oanG-2AMSIYdrkV_LmbOBi3TnEpRD-RZs35OcI-SnJE=
+6mV_4iGTA4DuVJbNNR0hAHaee4LtFyqvlJ9xw3za7VGaYlyJFuA0qb8w7lFXNZ-Do1-RLswEC7s=
+uJ3BpnC37LYPRuJ9IatK data-k-tracking-label=3DFooter:Vibecode target=3D_blan=
+k rel=3Dnoopener style=3D"color: rgb(95, 99, 104); text-decoration: none;">=
+Vibe code</a></span></li> </ul> </div> </div> </div> </td> </tr> </table> <=
+/div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr> </ta=
+ble> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div> </t=
+d> </tr> </table> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspac=
+ing=3D0 role=3Dpresentation style=3Dbackground-color:#1E1F20;width:100%; cl=
+ass=3Dsection> <tr> <td align=3Dcenter> <div role=3Dpresentation> <!--[if m=
+so | IE]> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" class=3D"hide-on-mobile-outlook block-grid-outlook" style=3D"width:=
+640px;" width=3D"640" > <tr> <td style=3D"line-height:0px;font-size:0px;mso=
+-line-height-rule:exactly;"> <![endif]--> <div style=3D"background:transpar=
+ent;background-color:transparent;margin:0 auto;max-width:640px;"> <table al=
+ign=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation=
+ style=3Dbackground-color:transparent;width:100%;> <tr> <td style=3D"displa=
+y: none; font-size: 0px; padding: 0px 28px 0px 28px; text-align: center; ve=
+rtical-align: top;" class=3D"hide-on-mobile block-grid" align=3Dcenter vali=
+gn=3Dtop> <!--[if mso | IE]> <table role=3D"presentation" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0"> <tr> <td style=3D"vertical-align:top;width=
+:584px;" > <![endif]--> <div class=3D"mj-column-per-100 mj-outlook-group-fi=
+x" style=3Dfont-size:0px;text-align:left;direction:ltr;display:inline-block=
+;vertical-align:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspac=
+ing=3D0 role=3Dpresentation style=3Dbackground-color:#444748;border-radius:=
+0px;vertical-align:top; width=3D100%> <tr> <td class=3Dpadding-0px-50px-0px=
+-50px style=3D"font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;=
+mso-padding-alt:0px 50px 0px 50px;text-align:center;"> <table width=3D100% =
+role=3Dpresentation border=3D0 cellpadding=3D0 cellspacing=3D0 style=3D"bor=
+der-top:solid 1px transparent;font-size:0;display:inline-block;line-height:=
+0;"> <tr> <td height=3D0 style=3Dheight:0;line-height:0;>&nbsp; </td> </tr>=
+ </table> </td> </tr> </table> </div> <!--[if mso | IE]> </td> </tr> </tabl=
+e> <![endif]--> </td> </tr> </table> </div> <!--[if mso | IE]> </td> </tr> =
+</table> <![endif]--> </div> </td> </tr> </table> <table align=3Dcenter bor=
+der=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbackgro=
+und-color:#1A1A1A;width:100%; class=3Dsection> <tr> <td align=3Dcenter> <di=
+v role=3Dpresentation> <!--[if mso | IE]> <table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"block-grid-outlook" style=
+=3D"width:640px;" width=3D"640" > <tr> <td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;"> <![endif]--> <div style=3D"backgroun=
+d:transparent;background-color:transparent;margin:0 auto;border-radius:0px;=
+max-width:640px;"> <table align=3Dcenter border=3D0 cellpadding=3D0 cellspa=
+cing=3D0 role=3Dpresentation style=3Dbackground-color:transparent;width:100=
+%;border-radius:0px;> <tr> <td style=3D"border-radius:0px;font-size:0px;pad=
+ding:0px 30px 32px 30px;text-align:center;vertical-align:top;mso-padding-al=
+t:16px 60px 16px 60px;" class=3D"block-grid padding-16px-60px-16px-60px"> <=
+!--[if mso | IE]> <table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"> <tr> <td style=3D"vertical-align:top;width:260px;" > =
+<![endif]--> <div class=3D"mj-column-per-50 mj-outlook-group-fix" style=3Df=
+ont-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-al=
+ign:top;width:100%;> <table border=3D0 cellpadding=3D0 cellspacing=3D0 role=
+=3Dpresentation style=3Dborder-radius:0px;vertical-align:top; width=3D100%>=
+ <tr> <td class=3D"padding-0px-0px-0px-63px text-container" style=3D"font-s=
+ize:0px;padding:24px 0px 0px 0px;word-break:break-word;mso-padding-alt:0px =
+0px 0px 63px;text-align:left;"> <div class=3Dlinks-5F6368> <div style=3D"fo=
+nt-family:'Google Sans Text', Roboto, sans-serif;font-size:14px;font-weight=
+:normal;letter-spacing:none;line-height:1.50;text-align:left;mso-line-heigh=
+t-alt:1.313em;color:#1C1B1B;"> <div class=3Dimage-list> <ul class=3Dul-0aaf=
+a500-83f7-11f1-89b5-1514a8dd340e style=3D"display: block; margin-top: 0px; =
+margin-bottom: 0px; padding-left: 0px; list-style-type: none; mso-para-marg=
+in-left: 0px;"> <li class=3Dlevel1 style=3D"background: left top / 19px no-=
+repeat; padding-left: 29px; margin-left: 0px; margin-top: 0px; margin-botto=
+m: 0px; background-image: url(https://gstatic.com/growthlab/api/sR9yy0EpO2n=
+Jy0cschY84FQjJRsKKYGoGMctvPKY.png); background-size: 19px; background-repea=
+t: no-repeat; background-position: left top;"> <span class=3Dlist-item><a h=
+ref=3Dhttps://c.gle/AKMee0dUO6j6ka0QMgFhIFnzC1v_k2N4yHcEbfE04OQwovtFUoba_KV=
+Cu5rzTsV7zIKt5ygiTYTRiLYDIPkAJZhl-hD4hKpKvPKpIMiWhGIu0L4UrpPWEo7v3JnftOlG_O=
+ytiZYdOQiJbTwmDBjZzpLx1Bo4PAC_MUI data-k-tracking-label=3DFooter:Latestprod=
+uctupdates target=3D_blank rel=3Dnoopener style=3D"color: rgb(95, 99, 104);=
+ text-decoration: none;">Latest product updates</a></span></li> </ul> </div=
+> </div> </div> </td> </tr> </table> </div> <!--[if mso | IE]> </td> <td st=
+yle=3D"vertical-align:top;width:260px;" > <![endif]--> <div class=3D"mj-col=
+umn-per-50 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left;dire=
+ction:ltr;display:inline-block;vertical-align:top;width:100%;> <table borde=
+r=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dborder-ra=
+dius:0px;vertical-align:top; width=3D100%> <tr> <td class=3D"padding-0px-15=
+px-0px-29px text-container" style=3D"font-size:0px;padding:24px 0px 0px 0px=
+;word-break:break-word;mso-padding-alt:0px 15px 0px 29px;text-align:left;">=
+ <div class=3Dlinks-5F6368> <div style=3D"font-family:'Google Sans Text', R=
+oboto, sans-serif;font-size:14px;font-weight:normal;letter-spacing:none;lin=
+e-height:1.5;text-align:left;mso-line-height-alt:1.313em;color:#1C1B1B;"> <=
+div class=3Dimage-list> <ul class=3Dul-0ab0dd80-83f7-11f1-89b5-1514a8dd340e=
+ style=3D"display: block; margin-top: 0px; margin-bottom: 0px; padding-left=
+: 0px; list-style-type: none; mso-para-margin-left: 0px;"> <li class=3Dleve=
+l1 style=3D"background: left top / 19px no-repeat; padding-left: 31px; marg=
+in-left: 0px; margin-top: 0px; margin-bottom: 0px; background-image: url(ht=
+tps://gstatic.com/growthlab/api/7G6c5xo0NBw9srnCK4dAzr20vTeokvy6CHS0Lv4W.pn=
+g); background-size: 19px; background-repeat: no-repeat; background-positio=
+n: left top;"> <span class=3Dlist-item><a href=3Dhttps://c.gle/AKMee0eqBU89=
+5KLYLWefzIZUldw8HRnEjd-ywgAspXsPYtYAgo2YBRt0ocwLJENRBXcmWFLlGRKKrTcdsxh0STW=
+2pJfM8oRttYdd-FQ0cldgu3Wn4zs46qTYzMjSyWmq8mGnltwxFNpxoZiHBObyQ-gRbv8EXZI da=
+ta-k-tracking-label=3DFooter:Upcomingglobalevents target=3D_blank rel=3Dnoo=
+pener style=3D"color: rgb(95, 99, 104); text-decoration: none;">Upcoming gl=
+obal events</a></span> </li> </ul> </div> </div> </div> </td> </tr> </table=
+> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td> </tr> <=
+/table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </div> =
+</td> </tr> </table> <table align=3Dcenter border=3D0 cellpadding=3D0 cells=
+pacing=3D0 role=3Dpresentation style=3Dbackground-color:#1A1A1A;width:100%;=
+ class=3Dsection> <tr> <td align=3Dcenter> <div role=3Dpresentation> <!--[i=
+f mso | IE]> <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"block-grid-outlook" style=3D"width:640px;" width=3D"640=
+" > <tr> <td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:ex=
+actly;"> <![endif]--> <div style=3D"background:transparent;background-color=
+:transparent;margin:0 auto;border-radius:0px;max-width:640px;"> <table alig=
+n=3Dcenter border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation s=
+tyle=3Dbackground-color:transparent;width:100%;border-radius:0px;> <tr> <td=
+ style=3D"border-radius:0px;font-size:0px;padding:34px 30px 24px 30px;text-=
+align:center;vertical-align:top;mso-padding-alt:40px 28px 40px 28px;" class=
+=3D"block-grid padding-40px-28px-40px-28px"> <!--[if mso | IE]> <table role=
+=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"> <tr> <t=
+d style=3D"vertical-align:top;width:584px;" > <![endif]--> <div class=3D"mj=
+-column-per-100 mj-outlook-group-fix" style=3Dfont-size:0px;text-align:left=
+;direction:ltr;display:inline-block;vertical-align:top;width:100%;> <table =
+border=3D0 cellpadding=3D0 cellspacing=3D0 role=3Dpresentation style=3Dbord=
+er-radius:0px;vertical-align:top; width=3D100%> <tr> <td class=3Dtext-conta=
+iner style=3D"font-size:0px;padding:0px 0px 10px 0px;word-break:break-word;=
+text-align:left;"> <div class=3Dlinks-1A73E8-underline> <div style=3D"font-=
+family:'Roboto', 'Open Sans', Arial, sans-serif;font-size:12px;font-weight:=
+normal;letter-spacing:none;line-height:1.50;text-align:left;mso-line-height=
+-alt:1.125em;color:#80868B;"> <p style=3D"margin: 0;">=C2=A9 2026 <a class=
+=3Ddark-mode-color-FFFFFF style=3Dpointer-events:none;cursor:text;text-deco=
+ration:none;color:#80868B;font-size:12px;>Google LLC 1600 Amphitheatre Park=
+way, Mountain View, CA 94043, USA</a> </p> </div> </div> </td> </tr> <tr> <=
+td class=3Dtext-container style=3D"font-size:0px;padding:10px 0px 10px 0px;=
+word-break:break-word;text-align:left;"> <div class=3Dlinks-8AB4F8-underlin=
+e> <div style=3D"font-family:'Roboto', 'Open Sans', Arial, sans-serif;font-=
+size:12px;font-weight:normal;letter-spacing:none;line-height:1.5;text-align=
+:left;mso-line-height-alt:1.125em;color:#80868B;"> <p style=3D"margin: 0;">=
+This email was sent to harshksingh897@gmail.com because you signed up to re=
+ceive emails about Google AI. If you do not wish to receive these emails, p=
+lease <a href=3Dhttps://myaccount.google.com/communication-preferences/unsu=
+bscribe/gt/AKMee0e3PY8hZGmLgsFR_G0UPqJ1NSBJiYqtXY06i9536ijKihqtytU27NuoDiBo=
+ZyhzAnAWVod1IrYKLmqK9gFC0RjwXNTzQaWwEzAQ6sVsnkAeHj0eTBQE2ppnwcBpI4m7e9-Hm0k=
+jxaHJtHn1fk60M2IRc7FxaEfRUFeHjrWZX9RQrU3cj1IzTNx0HWpWTToPwrgoR7tXpbI1mS5o-C=
+e6QZQrjKy-bGtuGzgTY5DGGUuUo5YhiXtn?utm_source=3Dgm&amp;utm_medium=3Demail&a=
+mp;auto=3Dtrue target=3D_blank rel=3Dnoopener style=3D"color: #7eaaff; text=
+-decoration: underline;">unsubscribe</a>. </p> </div> </div> </td> </tr> </=
+table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </td> </=
+tr> </table> </div> <!--[if mso | IE]> </td> </tr> </table> <![endif]--> </=
+div> </td> </tr> </table> </div> <!--[if mso ]> <table id=3D"email-containe=
+r" style=3D"width:600px;line-height:0;font-size:0;height:0;overflow:hidden;=
+border-collapse:collapse" width=3D"600"><img alt=3D"" height=3D"1" src=3D"h=
+ttps://notifications.google.com/g/img/AKMee0clv8d6dB3Wvzi85dBC4GtQ2IWl5Pj0m=
+FIIQ3-cUSghw-g4ZSCuCOkL7QxtTL6VjSo1jBCWufswelBx2kB2rQhUrVAwJH1yQtjMgQusf8Hx=
+RVOTbAU0gGhsqIerWbJ-NNpjkw.gif" width=3D"3"></table><![endif]--> <!--[if !m=
+so]><!--> <div style=3Dwidth:auto;line-height:0;font-size:0;height:0;overfl=
+ow:hidden;border-collapse:collapse><img alt=3D"" height=3D1 src=3Dhttps://n=
+otifications.google.com/g/img/AKMee0clv8d6dB3Wvzi85dBC4GtQ2IWl5Pj0mFIIQ3-cU=
+Sghw-g4ZSCuCOkL7QxtTL6VjSo1jBCWufswelBx2kB2rQhUrVAwJH1yQtjMgQusf8HxRVOTbAU0=
+gGhsqIerWbJ-NNpjkw.gif width=3D3></div> <!--<![endif]--> </div> </div> </bo=
+dy> </html>
+--000000000000bca8b706572e8e00--

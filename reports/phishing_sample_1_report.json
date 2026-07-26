@@ -1,0 +1,61 @@
+{
+  "source": "phishing_sample_1.eml",
+  "generated_at_utc": "2026-07-26T16:40:44.941558+00:00",
+  "message": {
+    "subject": "URGENT: Immediate Wire Transfer Authorization Required",
+    "from_display_name": "CEO Name",
+    "from_address": "ceo.name@gmail.com",
+    "reply_to_address": "finance-urgent@executive-update.com",
+    "attachment_count": 0,
+    "attachments": []
+  },
+  "risk": {
+    "score": 98,
+    "verdict": "MALICIOUS",
+    "recommended_action": "Block Domain & Escalate"
+  },
+  "findings": [
+    {
+      "category": "reply_to_mismatch",
+      "severity_label": "Medium",
+      "description": "Reply-To address ('finance-urgent@executive-update.com') routes replies to a different domain than the visible sender ('gmail.com').",
+      "evidence": "Reply-To: finance-urgent@executive-update.com"
+    },
+    {
+      "category": "urgency_language",
+      "severity_label": "Low",
+      "description": "Message contains urgency/time-pressure language.",
+      "evidence": "Matched phrase(s): immediately"
+    },
+    {
+      "category": "authority_language",
+      "severity_label": "Low",
+      "description": "Message contains authority-impersonation language.",
+      "evidence": "Matched phrase(s): ceo, strictly confidential"
+    },
+    {
+      "category": "sensitive_info_request",
+      "severity_label": "Medium",
+      "description": "Message contains a request for sensitive/credential information.",
+      "evidence": "Matched phrase(s): wire transfer"
+    },
+    {
+      "category": "secrecy_bypass_language",
+      "severity_label": "Medium",
+      "description": "Message contains instructions to bypass normal verification or keep the request secret.",
+      "evidence": "Matched phrase(s): do not discuss"
+    },
+    {
+      "category": "typosquat_domain",
+      "severity_label": "High",
+      "description": "Domain combines brand name 'paypal' with extra words (combosquatting) in 'paypal-secure-verify.top'.",
+      "evidence": "URL: https://paypal-secure-verify.top/wire"
+    },
+    {
+      "category": "suspicious_tld",
+      "severity_label": "Medium",
+      "description": "Domain uses a high-abuse top-level domain ('paypal-secure-verify.top').",
+      "evidence": "URL: https://paypal-secure-verify.top/wire"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+From: +1-800-000-1234
+
+USPS: Your package could not be delivered due to an incomplete address.
+Update your delivery preferences within 24 hours to avoid return to sender:
+https://usps-track.club/redeliver
+
+If you did not request this, act now and confirm your details immediately.

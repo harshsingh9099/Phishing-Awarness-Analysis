@@ -1,0 +1,32 @@
+From: Microsoft Support <support@logins-updates.com>
+Reply-To: no-reply@login-update.com
+Subject: FW: Urgent Your Account Security Alert
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="PHISHGUARD_BOUNDARY"
+
+--PHISHGUARD_BOUNDARY
+Content-Type: text/plain; charset="utf-8"
+
+Dear User,
+
+Your account will be suspended within 24 hours due to unusual activity
+detected from an unrecognized device. To avoid permanent account
+suspension, verify your password and MFA code immediately at the link
+below.
+
+Sign in here: https://www.decodelabs.tech.login-update.com/verify
+Alternative mirror: https://amaz0n-secure.click/confirm
+
+We have also attached a mandatory security update tool. Please run it
+before signing in.
+
+IT Support Team
+
+--PHISHGUARD_BOUNDARY
+Content-Type: application/octet-stream; name="Security_Update_2026.scr"
+Content-Disposition: attachment; filename="Security_Update_2026.scr"
+Content-Transfer-Encoding: base64
+
+VEhJUyBJUyBBIEhBUk1MRVNTIFBMQUNFSE9MREVSIFBBWUxPQUQgRk9SIFRFU1RJTkcgT05MWS4=
+
+--PHISHGUARD_BOUNDARY--

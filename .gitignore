@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# Generated at runtime -- never commit real analyzed reports or logs,
+# they may contain sensitive data extracted from real-world samples.
+logs/*.log
+reports/*.json
+reports/*.md
+
+# OS / editor cruft
+.DS_Store
+.idea/
+.vscode/

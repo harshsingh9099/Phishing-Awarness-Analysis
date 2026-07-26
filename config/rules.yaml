@@ -1,0 +1,160 @@
+# =============================================================================
+# PhishGuard Triage - Detection Rules Configuration
+# Tune these lists/weights without touching source code.
+# =============================================================================
+
+trusted_brands:
+  - amazon
+  - paypal
+  - microsoft
+  - google
+  - apple
+  - facebook
+  - netflix
+  - chase
+  - bankofamerica
+  - wellsfargo
+  - linkedin
+  - dropbox
+  - docusign
+  - office365
+  - decodelabs
+  - usps
+  - fedex
+
+# Freemail providers that should never legitimately send "official" brand/exec mail
+freemail_domains:
+  - gmail.com
+  - yahoo.com
+  - outlook.com
+  - hotmail.com
+  - aol.com
+  - protonmail.com
+  - icloud.com
+  - mail.com
+
+urgency_keywords:
+  - urgent
+  - immediately
+  - act now
+  - expires
+  - expiring
+  - locked
+  - suspended
+  - verify now
+  - act fast
+  - within 24 hours
+  - final notice
+  - account will be closed
+  - respond immediately
+
+authority_keywords:
+  - ceo
+  - director
+  - hr department
+  - it support
+  - it department
+  - law enforcement
+  - legal action
+  - compliance team
+  - executive assistant
+  - strictly confidential
+
+fear_greed_keywords:
+  - account suspended
+  - unauthorized access
+  - unusual activity
+  - prize
+  - winner
+  - claim your reward
+  - unclaimed funds
+  - tax refund
+  - you have won
+  - free gift
+  - lottery
+
+sensitive_info_keywords:
+  - password
+  - otp
+  - one-time code
+  - one time passcode
+  - ssn
+  - social security
+  - wire transfer
+  - bank account
+  - routing number
+  - mfa code
+  - verification code
+  - card number
+  - cvv
+  - pin number
+
+secrecy_bypass_keywords:
+  - do not discuss
+  - bypass standard procedure
+  - keep this confidential
+  - do not tell
+  - between us
+  - do not verify
+  - skip verification
+
+dangerous_attachment_extensions:
+  - .exe
+  - .js
+  - .scr
+  - .iso
+  - .vbs
+  - .bat
+  - .jar
+  - .hta
+  - .lnk
+  - .ps1
+  - .msi
+
+suspicious_tlds:
+  - .zip
+  - .mov
+  - .top
+  - .xyz
+  - .club
+  - .work
+  - .click
+  - .country
+  - .gq
+  - .tk
+
+url_shorteners:
+  - bit.ly
+  - tinyurl.com
+  - t.co
+  - goo.gl
+  - ow.ly
+  - is.gd
+  - buff.ly
+  - rebrand.ly
+
+# Levenshtein distance <= this value (and not an exact match) triggers a typosquat flag
+typosquat_max_distance: 2
+
+# Category weights used by the risk scoring engine (0-100 scale contribution)
+scoring_weights:
+  sender_domain_mismatch: 25
+  display_name_spoof: 15
+  typosquat_domain: 20
+  homoglyph_domain: 25
+  ip_literal_url: 20
+  url_shortener: 10
+  suspicious_tld: 15
+  subdomain_trap: 20
+  dangerous_attachment: 30
+  urgency_language: 10
+  authority_language: 8
+  fear_greed_language: 8
+  sensitive_info_request: 15
+  secrecy_bypass_language: 15
+  reply_to_mismatch: 15
+
+# Verdict thresholds (score out of 100)
+thresholds:
+  suspicious_at: 25
+  malicious_at: 55
